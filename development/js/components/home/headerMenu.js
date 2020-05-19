@@ -8,7 +8,7 @@ export const HeaderMenu = () => {
 
     return (<>
 
-            <ul className="col-12">
+            <ul className="col-12 header__content__menu">
                 <li>Start</li>
                 <li>O co chodzi?</li>
                 <li>O nas</li>

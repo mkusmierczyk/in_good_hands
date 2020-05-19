@@ -1,12 +1,16 @@
 //generic
 @import "generic/reset";
+
 @import "generic/grid";
 @import "generic/var";
-@import "generic/all";
+@import "generic/all1";
 
 //components
+//header
+@import "components/header/header";
+@import "components/header/headerMenu";
+@import "components/header/headerSignInLog";
+@import "components/header/headerStartHelp";
 
 
-div{
-  font-family: $text_font;
-}
+

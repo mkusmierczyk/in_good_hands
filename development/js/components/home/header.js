@@ -9,20 +9,14 @@ import {StartHelp} from "./headerStartHelp";
 export const Header = () => {
 
     return (<>
-    <div className="row">
-        <div className="col-5"> </div>
-        <div className="col-7">
-        <div className="row">
-            <HeaderSignInLog/>
-        </div>
-        <div className="row">
-            <HeaderMenu/>
-        </div>
-            <div className="row">
-                <StartHelp/>
+            <div className="row header">
+                <div className="col-6 header__picture"> </div>
+                <div className="col-6 header__content">
+                        <HeaderSignInLog/>
+                        <HeaderMenu/>
+                        <StartHelp/>
+                </div>
             </div>
-    </div>
-    </div>
-</>
-)
+        </>
+    )
 }

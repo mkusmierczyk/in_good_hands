@@ -7,10 +7,9 @@ export const HeaderSignInLog = () => {
 
     return (<>
 
-            <div className="col-12">
-                <button> <Link to={"/logIn"}>Zaloguj </Link></button>
-                <button> <Link to={"/register"}> Załóż konto </Link> </button>
-
+            <div className="col-12 header__content__signInLog">
+                   <Link to={"/logIn"} className=" header__content__log">Zaloguj </Link>
+                 <Link to={"/register"} className=" header__content__signIn"> Załóż konto </Link>
 
         </div>
     </>)

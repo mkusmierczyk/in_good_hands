@@ -1,0 +1,14 @@
+.header__content__signInLog{
+  display: flex;
+  justify-content: flex-end;
+
+  a{
+    margin: 48px 19px 34px 0;
+    background-color: $white;
+    padding: 0px;
+    text-decoration: none;
+    color: $complementary_font_color;
+
+    font-family: $text_font;
+  }
+}
