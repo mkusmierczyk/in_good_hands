@@ -5,7 +5,7 @@ import {BrowserRouter, HashRouter, Link, Route} from "react-router-dom";
 
 export const StartHelp = () => {
 
-    return (<>
+    return (
         <div className="col-12 header__content__startHelp">
             <div className="col-12 header__content__startHelp__title">
                 <h1> Zacznij pomogać !<span> Oddaj niechciane rzeczy w zaufane ręce </span></h1>
@@ -16,5 +16,5 @@ export const StartHelp = () => {
                 <button className="col-6 btn"><Link to={"/LogIn"}> ZORGANIZUJ ZBIÓRKĘ </Link></button>
             </div>
         </div>
-    </>)
+   )
 }

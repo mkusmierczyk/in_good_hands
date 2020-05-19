@@ -1,0 +1,61 @@
+.simpleSteps {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0 2rem 0;
+  font-size: 2rem;
+
+
+  span {
+    background-size: cover;
+    background: url('/../../../images/assets/Decoration.svg') no-repeat center;
+    height: 7rem;
+  }
+}
+.simpleSteps__content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $background_color ;
+  height: 20rem;
+  :last-child{
+
+  }
+
+  p{
+    text-align: center;
+    margin: 1rem 0 0.5rem 0 ;
+    width: 7rem;
+    display: flex;
+    align-self: center;
+  }
+
+
+  span{
+    border: 1px solid $main_font_color;
+    width: 5rem;
+   display: flex;
+    align-self: center;
+  }
+}
+
+.simpleSteps__content__text{
+  text-align: center;
+}
+.simpleSteps--btn{
+  display: flex;
+  justify-content: center;
+  button{
+    margin:2rem 2.5rem 0 3rem;
+    font-family: $text_font;
+    height:8rem;
+    width: 17% ;
+
+  }
+  a {
+    color: $black;
+    font-weight: lighter;
+
+  }
+
+}

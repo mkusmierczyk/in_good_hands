@@ -1,0 +1,33 @@
+.aboutUs{
+  margin-top: 4rem;
+  height: 30rem;
+  background-color: $background_color;
+
+}
+
+.aboutUs__picture{
+  background-size: cover;
+  background: url('/../../../images/assets/People.jpg') no-repeat center;
+
+}
+.aboutUs__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 0 10rem 0 10rem;
+}
+.aboutUs__content_title{
+ text-align: center;
+
+}
+.aboutUs__content__image{
+  background-size: cover;
+  background: url('/../../../images/assets/Decoration.svg') no-repeat center;
+  height: 7rem;
+
+}
+.aboutUs__content__text{
+  text-align: center;
+
+}

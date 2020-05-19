@@ -1,14 +1,18 @@
+
 .header__content__signInLog{
   display: flex;
   justify-content: flex-end;
+  :last-child{
+    margin-right: 2.2rem;
+  }
 
   a{
-    margin: 48px 19px 34px 0;
+    margin: 48px 25px 34px 0;
     background-color: $white;
-    padding: 0px;
     text-decoration: none;
     color: $complementary_font_color;
 
     font-family: $text_font;
+
   }
 }
