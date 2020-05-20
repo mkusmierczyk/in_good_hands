@@ -1,7 +1,5 @@
 .header__content__startHelp__title{
-    text-align: center;
-    font-size:  1.9rem;
-    letter-spacing: -0.76px;
+
     span{
     display:block;
     margin: 1rem 0 0.5rem 0 ;
@@ -9,11 +7,7 @@
 
 
 }
-.header__content__startHelp__title__image {
-  background-size: cover;
-  background: url('/../../../images/assets/Decoration.svg') no-repeat center;
-  height: 7rem;
-}
+
 
 .header__content__startHelp__btn {
   display: flex;

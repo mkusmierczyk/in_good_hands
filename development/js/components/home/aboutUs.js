@@ -6,12 +6,12 @@ import {BrowserRouter, HashRouter, Link, Route} from "react-router-dom";
 export const AboutUs = () => {
 
     return (<>
-        <div className="row aboutUs">
+        <div className="row aboutUs" id = "aboutUs">
 
             <div className="col-6 aboutUs__content ">
-                <div className="aboutUs__content_title">
+                <div className="aboutUs__content_title title">
                     <h1> O nas </h1>
-                    <span className="aboutUs__content__image"> </span>
+                    <span className="aboutUs__content__image decorationImage"> </span>
                 </div>
                 <div className="row aboutUs__content__text">
                     <p> Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts

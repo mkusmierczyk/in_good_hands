@@ -6,11 +6,7 @@
   font-size: 2rem;
 
 
-  span {
-    background-size: cover;
-    background: url('/../../../images/assets/Decoration.svg') no-repeat center;
-    height: 7rem;
-  }
+
 }
 .simpleSteps__content{
   display: flex;
@@ -18,9 +14,7 @@
   flex-direction: column;
   background-color: $background_color ;
   height: 20rem;
-  :last-child{
 
-  }
 
   p{
     text-align: center;

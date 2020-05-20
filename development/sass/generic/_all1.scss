@@ -23,3 +23,20 @@ body {
 }
 
 
+.decorationImage{
+
+    display: block;
+    background-size: cover;
+    background: url('/../../images/assets/Decoration.svg') no-repeat center;
+    height: 7rem;
+
+}
+
+.title{
+  text-align: center;
+  font-size: 2rem
+}
+
+.active{
+  border:1px solid $complementary_font_color;
+}

@@ -3,11 +3,16 @@
   justify-content: flex-end;
   font-size: 1rem;
   margin-bottom: 13em;
+  cursor: pointer;
+}
 
-  li {
+.header__content__menu__link{
     margin-right: 2.3em;
   }
 
+ .current{
+  background-color: red;
 
 }
+
 
