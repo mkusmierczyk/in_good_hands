@@ -19,9 +19,9 @@ export const SimpleSteps = () => {
             </div>
 
 
-            <div className=" col-12 simpleSteps__content">
+            <div className=" col-12 simpleSteps__content icon2 ">
                 <img src="./../../../images/assets/Icon-2.svg"/>
-                <p className="simpleSteps__content_text"> Spakuj je </p>
+                <p className="simpleSteps__content_text " > Spakuj je </p>
                 <span></span>
                 <p className="simpleSteps__content_description">skorzystaj z worków na śmieci</p>
 

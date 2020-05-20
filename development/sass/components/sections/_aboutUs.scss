@@ -1,6 +1,6 @@
 .aboutUs{
   margin-top: 4rem;
-  height: 30rem;
+  height: 40rem;
   background-color: $background_color;
 
 }
@@ -19,9 +19,11 @@
 }
 .aboutUs__content_title{
  text-align: center;
+  font-size: 2rem
 
 }
 .aboutUs__content__image{
+  display: block;
   background-size: cover;
   background: url('/../../../images/assets/Decoration.svg') no-repeat center;
   height: 7rem;
@@ -29,5 +31,12 @@
 }
 .aboutUs__content__text{
   text-align: center;
+  letter-spacing: -0.6px;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
 
+}
+.aboutUs__signature{
+  display: flex;
+  justify-content: flex-end;
 }

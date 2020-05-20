@@ -39,17 +39,20 @@
   }
 }
 
+
 .simpleSteps__content__text{
   text-align: center;
 }
 .simpleSteps--btn{
   display: flex;
   justify-content: center;
+
   button{
     margin:2rem 2.5rem 0 3rem;
     font-family: $text_font;
     height:8rem;
     width: 17% ;
+    border: 1px solid $main_font_color;
 
   }
   a {
@@ -58,4 +61,7 @@
 
   }
 
+}
+.icon2 .simpleSteps__content_text {
+  margin-left: 3rem;
 }

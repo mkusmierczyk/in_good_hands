@@ -8,13 +8,15 @@ body {
 
 
 .btn{
-
-
+  background-color: $white;
+  border-radius:  1px solid $complementary_font_color;
   a {
     height: 8rem;
     text-decoration: none;
     font-size: 2rem;
     text-align: center;
+
+
 
 
   }
