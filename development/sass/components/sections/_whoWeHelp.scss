@@ -67,3 +67,15 @@ align-items: center;
   margin:1.2rem 0 1.2rem 0;
   text-align:right
 }
+.whoWeHelp__content__beneficiary{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  li a{
+    border: 1px solid $complementary_font_color;
+    text-decoration: none;
+    padding: 0 1rem 0 1rem;
+    margin:0.3rem;
+    color:$complementary_font_color;
+  }
+}

@@ -7,7 +7,7 @@ import {SimpleSteps} from "./simpleSteps";
 import {WhoWeHelp} from "./whoWeHelp";
 import {AboutUs} from "./aboutUs";
 import {Form} from "./form";
-import {FooterContact} from "./footerContact";
+import {Footer} from "./footer";
 import {HeaderSignInLog} from "./headerSignInLog";
 
 
@@ -20,7 +20,7 @@ export const Home = () => {
             <SimpleSteps/>
             <AboutUs/>
             <WhoWeHelp/>
-            <FooterContact/>
+            <Footer/>
             <Form/>
         </div>
 

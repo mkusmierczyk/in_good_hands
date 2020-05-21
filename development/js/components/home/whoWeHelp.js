@@ -1,5 +1,6 @@
 import React, {Component, useEffect, useState} from "react";
 import {ReactDOM, NavLink} from "react-dom";
+import {Pagination} from "./whoWeHelpPagination";
 
 
 export const WhoWeHelp = () => {
@@ -32,6 +33,31 @@ export const WhoWeHelp = () => {
                         mission: "Cel i misja: posiadających miejsca zamieszkania.",
                         things: " jedzenie, "
                     },
+                    {
+                        name: "Fundacja Bezradni",
+                        mission: "Cel i misja:  Pomoc w trudnej sytuacji.",
+                        things: "ubrania, jedzenie, sprzęt AGD, zabawki",
+                    },
+                    {
+                        name: "Fundacja Bezradni",
+                        mission: "Cel i misja:  Pomoc w trudnej sytuacji.",
+                        things: "ubrania, jedzenie, sprzęt AGD, zabawki",
+                    },
+                    {
+                        name: "Fundacja Bezradni",
+                        mission: "Cel i misja:  Pomoc w trudnej sytuacji.",
+                        things: "ubrania, jedzenie, sprzęt AGD, zabawki",
+                    },
+                    {
+                        name: "Fundacja Bezradni",
+                        mission: "Cel i misja:  Pomoc w trudnej sytuacji.",
+                        things: "ubrania, jedzenie, sprzęt AGD, zabawki",
+                    },
+                    {
+                        name: "Fundacja Bezradni",
+                        mission: "Cel i misja:  Pomoc w trudnej sytuacji.",
+                        things: "ubrania, jedzenie, sprzęt AGD, zabawki",
+                    },
                 ]
             },
             {
@@ -53,6 +79,26 @@ export const WhoWeHelp = () => {
                         things: " meble, zabawki",
                     },
 
+                    {
+                        name: "Fundacja Bezradni",
+                        mission: "Cel i misja:  Pomoc w trudnej sytuacji.",
+                        things: "ubrania, jedzenie, sprzęt AGD, zabawki",
+                    },
+                    {
+                        name: "Fundacja Bezradni",
+                        mission: "Cel i misja:  Pomoc w trudnej sytuacji.",
+                        things: "ubrania, jedzenie, sprzęt AGD, zabawki",
+                    },
+                    {
+                        name: "Fundacja Bezradni",
+                        mission: "Cel i misja:  Pomoc w trudnej sytuacji.",
+                        things: "ubrania, jedzenie, sprzęt AGD, zabawki",
+                    },
+                    {
+                        name: "Fundacja Bezradni",
+                        mission: "Cel i misja:  Pomoc w trudnej sytuacji.",
+                        things: "ubrania, jedzenie, sprzęt AGD, zabawki",
+                    },
                     {
                         name: "Fundacja Bezradni",
                         mission: "Cel i misja:  Pomoc w trudnej sytuacji.",
@@ -84,6 +130,7 @@ export const WhoWeHelp = () => {
                         mission: "Cel i misja: Zdrowie.",
                         things: [" meble, zabawki", "ubrania, jedzenie, sprzęt AGD, zabawki", " jedzenie, "]
                     },
+
                 ]
 
             },
@@ -93,7 +140,14 @@ export const WhoWeHelp = () => {
 
 
     const [organizationSection, setOrganizationSection] = useState(alternateSection.whoWeHelp[0])
+    const [currentPage, setCurrentPage] = useState(2)
+    const [elemPerPage] = useState(6)
 
+
+useEffect(()=>{
+
+
+},[])
 
     const HandleClick = (e) => {
         e.preventDefault()
@@ -112,11 +166,22 @@ export const WhoWeHelp = () => {
     }
 
 
-    let {title, fund, ngo, local} = organizationSection
+    const {title, fund, ngo, local} = organizationSection;
 
-    let allBeneficiary = organizationSection.organizations
+    const allBeneficiary = organizationSection.organizations;
+
+    //Get current page
+
+    const indexOfLastElem = currentPage * elemPerPage;
+    const indexOfFirstElem = indexOfLastElem - elemPerPage
+    const currentElem = allBeneficiary.slice(indexOfFirstElem-indexOfLastElem)
 
 
+    //Change PAge
+    const paginate= pageNumber=> setCurrentPage(pageNumber)
+
+
+    console.log(currentElem)
     return (<>
             <div className="row whoWeHelp">
                 <div className="col-12 WhoWeHelp__header ">
@@ -137,21 +202,13 @@ export const WhoWeHelp = () => {
                             zbiórkom
                         </div>
                     </div>
-
-
                     <div className="row whoWeHelp__content__beneficiary">
                         <h1 className="col-5 whoWeHelp__content__beneficiary__title">{title}</h1>
                     </div>
-                    <ul className="whoWeHelp__content__beneficiary__list">
-                        {allBeneficiary.map((elem, index) => <li
-                            className="col-9 whoWeHelp__content__beneficiary__list__elem " key={index}>
-                            <h2 className="col-6 whoWeHelp__content__beneficiary__elem__name">{elem.name}<span
-                                className="col-6 whoWeHelp__content__beneficiary__elem__things">{elem.things}</span>
-                            </h2>
 
-                            <p className="col-6 whoWeHelp__content__beneficiary__elem__mission">{elem.mission}</p>
-                        </li>)}
-                    </ul>
+                   <Pagination elemPerPage={elemPerPage} totalElem={allBeneficiary.length} currentElem={currentElem} paginate={paginate}/>
+
+
                 </div>
 
             </div>
