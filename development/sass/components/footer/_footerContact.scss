@@ -48,4 +48,12 @@
   width: 40%;
   border: 1px solid $black;
   height: 3rem;
+  &:hover{
+    background-color:$background_color;
+  }
+  &:active{
+  position: relative;
+    bottom:2px;
+    right:2px;
+}
 }
