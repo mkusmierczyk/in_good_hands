@@ -12,10 +12,7 @@ export const Footer = ()=>{
     return (<>
         <div className="row footer" id="contact">
             <div className="col-8 footer__picture"> </div>
-
                 <FooterContact/>
-
-
         </div>
         <FooterCopyright/>
     </>)

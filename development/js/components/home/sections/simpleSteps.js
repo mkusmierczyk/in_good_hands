@@ -12,7 +12,7 @@ export const SimpleSteps = () => {
         </div>
         <div className="row simpleSteps--all">
             <div className=" col-12 simpleSteps__content">
-                <img src="./../../../images/assets/Icon-1.svg"/>
+                <img src="../../../../images/assets/Icon-1.svg"/>
                 <p className="simpleSteps__content_text"> Wybierz rzeczy</p>
                 <span > </span>
                 <p className="simpleSteps__content_description">skorzystaj z worków na śmieci</p>
@@ -20,7 +20,7 @@ export const SimpleSteps = () => {
 
 
             <div className=" col-12 simpleSteps__content icon2 ">
-                <img src="./../../../images/assets/Icon-2.svg"/>
+                <img src="../../../../images/assets/Icon-2.svg"/>
                 <p className="simpleSteps__content_text " > Spakuj je </p>
                 <span></span>
                 <p className="simpleSteps__content_description">skorzystaj z worków na śmieci</p>
@@ -28,14 +28,14 @@ export const SimpleSteps = () => {
             </div>
 
             <div className=" col-12 simpleSteps__content">
-                <img src="./../../../images/assets/Icon-3.svg"/>
+                <img src="../../../../images/assets/Icon-3.svg"/>
                 <p className="simpleSteps__content_text"> Zdecyduj komu chcesz pomóc</p>
                 <span></span>
                 <p className="simpleSteps__content_description">wybierz zaufane miejsce</p>
 
             </div>
             <div className=" col-12 simpleSteps__content">
-                <img src="./../../../images/assets/Icon-4.svg"/>
+                <img src="../../../../images/assets/Icon-4.svg"/>
                 <p className="simpleSteps__content_text"> Zamów kuriera</p>
                 <span></span>
                 <p className="simpleSteps__content_description">kurier przyjedzie w dogodnym terminie</p>

@@ -18,7 +18,7 @@ export const AboutUs = () => {
                         black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
                 </div>
                 <div className="row aboutUs__signature">
-                    <img src="./../../../images/assets/Signature.svg"/>
+                    <img src="../../../../images/assets/Signature.svg"/>
                 </div>
             </div>
 
