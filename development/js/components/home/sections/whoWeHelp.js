@@ -140,8 +140,8 @@ export const WhoWeHelp = () => {
 
 
     const [organizationSection, setOrganizationSection] = useState(alternateSection.whoWeHelp[0])
-    const [currentPage, setCurrentPage] = useState(2)
-    const [elemPerPage] = useState(6)
+    const [currentPage, setCurrentPage] = useState(1)
+    const [elemPerPage] = useState(3)
 
 
 useEffect(()=>{
@@ -174,7 +174,7 @@ useEffect(()=>{
 
     const indexOfLastElem = currentPage * elemPerPage;
     const indexOfFirstElem = indexOfLastElem - elemPerPage
-    const currentElem = allBeneficiary.slice(indexOfFirstElem-indexOfLastElem)
+    const currentElem = allBeneficiary.slice(indexOfFirstElem,indexOfLastElem)
 
 
     //Change PAge

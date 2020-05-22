@@ -2,6 +2,7 @@ import React, {Component, useState} from "react";
 import {HeaderSignInLog} from "../home/header/headerSignInLog";
 import {HeaderMenu} from "../home/header/headerMenu";
 import useInput from "../hooks/useInput";
+import {Link} from "react-router-dom";
 
 
 export const Register = () => {
@@ -92,8 +93,8 @@ export const Register = () => {
 
 
                 <div className="row registerForm__btns  ">
-                    <input className=" col-1 registerForm__btn__log btn " type="submit" value="Zaloguj się"/>
-                    <input className="col-1 registerForm__btn__signIn btn" type="submit" value="Załóż konto"/>
+                    <input className="col-1 registerForm__btn__register  btn" type="submit" value="Załóż konto"/>
+                    <Link to={"/signIn"} className=" registerForm__btn__log btn">Zaloguj się </Link>
                 </div>
             </form>
         </div>

@@ -3,8 +3,6 @@
   flex-direction: column;
   align-items: center;
 
-
-
 }
 
 .registerForm__data{
@@ -26,10 +24,28 @@
 .registerForm__btns{
   display: flex;
   justify-content:space-around;
+
   input{
     height: 3.5rem;
     border: 1px solid $white;
     font-size:1rem
   }
+  a{
+    height: 3.5rem;
+    width: 7rem;
+    border: 1px solid $white;
+    font-size:1rem;
+    text-decoration: none;
+    color: $black;
+    padding-top: 2rem;
+   text-align: center;
+
+
+  }
+  :last-child{
+    border-color: black;
+  }
 }
+
+
 

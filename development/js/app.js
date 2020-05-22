@@ -4,6 +4,7 @@ import {BrowserRouter, HashRouter, Link, Route} from "react-router-dom";
 import '../sass/main.scss'
 import {Home} from "./components/home/sections/home";
 import {Register} from "./components/registerLog/register";
+import {SignIn} from "./components/registerLog/signIn";
 
 
 
@@ -16,6 +17,7 @@ const App = () => {
 
        <Route exact path = "/" component={Home}/>
            <Route exact path = "/register" component={Register}/>
+           <Route exact path = "/signIn" component={SignIn}/>
 
        </HashRouter>
 
