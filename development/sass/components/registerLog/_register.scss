@@ -1,0 +1,35 @@
+.registerForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+
+}
+
+.registerForm__data{
+  margin:2rem 0 2rem 0;
+  font-weight: bolder;
+  font-size: 1rem;
+
+
+  input{
+  margin-top:2rem ;
+    border:white;
+    border-bottom: 1px solid $complementary_font_color;
+    width: 100%;
+    display: block;
+}
+
+}
+
+.registerForm__btns{
+  display: flex;
+  justify-content:space-around;
+  input{
+    height: 3.5rem;
+    border: 1px solid $white;
+    font-size:1rem
+  }
+}
+

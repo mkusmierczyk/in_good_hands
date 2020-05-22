@@ -95,7 +95,7 @@ export const FooterContact = () => {
             {sendForm.status === 200 && <p className="formSent"> Wiadomość została wysłana! <span>Wkrótce się skontaktujemy </span></p>}
 
             <form className="footer__contact__form" onClick={validation}>
-                { }
+
                 <div className="row  ">
                     <label className="col-6 footer__contact__data">
                         Wpisz swoje Imię:
