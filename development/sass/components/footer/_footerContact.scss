@@ -1,5 +1,51 @@
-.footer__contact__title{
+
+
+
+.footer__contact__title {
   margin-top: 4rem;
 }
 
 
+.footer__contact__data {
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+
+  input {
+    margin-top: 0.5rem;
+    border: white;
+    border-bottom: 1px solid $complementary_font_color;
+
+  }
+
+}
+
+
+.footer__contact__textArea {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+
+  textarea {
+    margin-top: 0.5rem;
+    display: block;
+    border: white;
+    border-bottom: 1px solid $complementary_font_color;
+    width: 85%;
+    height: 6rem;
+    resize: none;
+  }
+}
+
+.footer__contact__submit {
+  display: flex;
+  justify-content: flex-end;
+  width: 85%;
+
+}
+
+.footer__contact__submit__btn {
+  margin-top: 3rem;
+  width: 40%;
+  border: 1px solid $black;
+  height: 3rem;
+}

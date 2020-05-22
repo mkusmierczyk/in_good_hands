@@ -183,7 +183,7 @@ useEffect(()=>{
 
     console.log(currentElem)
     return (<>
-            <div className="row whoWeHelp">
+            <div className="row whoWeHelp" id="fund">
                 <div className="col-12 WhoWeHelp__header ">
                     <div className="aboutUs__header_title title">
                         <h1> Komu pomagamy ? </h1>
