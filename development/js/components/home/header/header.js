@@ -12,9 +12,9 @@ export const Header = () => {
             <div className="row header">
                 <div className="col-6 header__picture"> </div>
                 <div className="col-6 header__content">
-                        <HeaderSignInLog/>
-                        <HeaderMenu/>
-                        <StartHelp/>
+                    <HeaderSignInLog/>
+                    <HeaderMenu/>
+                    <StartHelp/>
                 </div>
             </div>
         </>

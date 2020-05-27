@@ -3,6 +3,7 @@ import {HeaderSignInLog} from "../home/header/headerSignInLog";
 import {HeaderMenu} from "../home/header/headerMenu";
 import useInput from "../hooks/useInput";
 import {Link} from "react-router-dom";
+import firebase, {Auth as auth} from "firebase";
 
 
 export const SignIn = () => {
@@ -14,27 +15,14 @@ export const SignIn = () => {
     const [errorPassword, setErrorPassword] = useState("")
 
 
-    const validation = (e) => {
 
+    const validation = (e) => {
         e.preventDefault()
 
         function checkEmail(emailAddress) {
-            const sQtext = '[^\\x0d\\x22\\x5c\\x80-\\xff]';
-            const sDtext = '[^\\x0d\\x5b-\\x5d\\x80-\\xff]';
-            const sAtom = '[^\\x00-\\x20\\x22\\x28\\x29\\x2c\\x2e\\x3a-\\x3c\\x3e\\x40\\x5b-\\x5d\\x7f-\\xff]+';
-            const sQuotedPair = '\\x5c[\\x00-\\x7f]';
-            const sDomainLiteral = '\\x5b(' + sDtext + '|' + sQuotedPair + ')*\\x5d';
-            const sQuotedString = '\\x22(' + sQtext + '|' + sQuotedPair + ')*\\x22';
-            const sDomain_ref = sAtom;
-            const sSubDomain = '(' + sDomain_ref + '|' + sDomainLiteral + ')';
-            const sWord = '(' + sAtom + '|' + sQuotedString + ')';
-            const sDomain = sSubDomain + '(\\x2e' + sSubDomain + ')*';
-            const sLocalPart = sWord + '(\\x2e' + sWord + ')*';
-            const sAddrSpec = sLocalPart + '\\x40' + sDomain; // complete RFC822 email address spec
-            const sValidEmail = '^' + sAddrSpec + '$'; // as whole string
-            const reValidEmail = new RegExp(sValidEmail);
+            const reg = /^[-\w\.]+@([-\w]+\.)+[a-z]+$/i;
 
-            return reValidEmail.test(emailAddress);
+            return reg.test(emailAddress);
         }
 
 
@@ -52,6 +40,43 @@ export const SignIn = () => {
 
     }
 
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyD1yLySe8Y4y4K9noGnoDXUUFSz7VWGDZA",
+        authDomain: "in-good-hands-c41d2.firebaseapp.com",
+        databaseURL: "https://in-good-hands-c41d2.firebaseio.com",
+        projectId: "in-good-hands-c41d2",
+        storageBucket: "in-good-hands-c41d2.appspot.com",
+        messagingSenderId: "639688250702",
+        appId: "1:639688250702:web:08a5da78f8fc1f0f1f7a1f",
+        measurementId: "G-WZZ4J4NWHE"
+    };
+// Initialize Firebase
+
+    if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    }
+
+
+    const btnLogin = () => {
+
+        const auth = firebase.auth();
+
+
+        const promise = auth.signInWithEmailAndPassword(email, password);
+        promise.catch(e => console.log(e.message));
+
+    }
+
+
+
+
+//Logout
+    const btnLogout = () => {
+        firebase.auth().signOut();
+
+    }
 
     return (<>
         <div className="container">
@@ -78,20 +103,18 @@ export const SignIn = () => {
                         Hasło :
                         <input type="password" name="password" {...setPassword}/>
                         {errorPassword.length > 0 && <p className="error">{errorPassword}</p>}
-
                     </label>
 
                 </div>
 
-
                 <div className="row registerForm__btns  ">
-                    <Link to={"/register"} className="col-1 registerForm__btn__register btn"> Załóż konto </Link>
-                    <input className=" col-1 registerForm__btn__log  btn " type="submit" value="Zaloguj się"/>
+                    <Link to={"/register"} className={`col-1 registerForm__btn__register btn`}> Załóż konto </Link>
 
+                    <input className=" col-1 registerForm__btn__log btn " type="submit" value="Zaloguj się"
+                           onClick={btnLogin}/>
                 </div>
             </form>
+
         </div>
-
-
     </>)
 }

@@ -144,10 +144,6 @@ export const WhoWeHelp = () => {
     const [elemPerPage] = useState(3)
 
 
-useEffect(()=>{
-
-
-},[])
 
     const HandleClick = (e) => {
         e.preventDefault()

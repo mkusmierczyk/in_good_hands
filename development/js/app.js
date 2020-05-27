@@ -7,22 +7,16 @@ import {Register} from "./components/registerLog/register";
 import {SignIn} from "./components/registerLog/signIn";
 
 
-
-
-
 const App = () => {
     return (
 
-       <HashRouter>
+        <HashRouter>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/register" component={Register}/>
+            <Route exact path="/signIn" component={SignIn}/>
 
-       <Route exact path = "/" component={Home}/>
-           <Route exact path = "/register" component={Register}/>
-           <Route exact path = "/signIn" component={SignIn}/>
+        </HashRouter>
 
-       </HashRouter>
-
-
-)
+    )
 }
-
 ReactDOM.render(<App/>, document.getElementById("app"));
