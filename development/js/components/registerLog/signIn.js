@@ -47,8 +47,8 @@ export const SignIn = () => {
         if ( checkEmail(email) === true && password.length >= 6){
             const auth = firebase.auth();
 
-        const promise = auth.signInWithEmailAndPassword(email, password);
-        promise.then(e=> window.location.replace("/"))
+            const promise = auth.signInWithEmailAndPassword(email, password)
+            promise.then(e=> window.location.replace("/"))
             promise.catch(e => console.log(e.message));
 
         }

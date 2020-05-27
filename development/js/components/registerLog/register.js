@@ -3,9 +3,9 @@ import {HeaderSignInLog} from "../home/header/headerSignInLog";
 import {HeaderMenu} from "../home/header/headerMenu";
 import useInput from "../hooks/useInput";
 import {Link} from "react-router-dom";
-import { Redirect } from "react-router-dom"
-import 'firebase/auth'
-import 'firebase/firestore'
+
+
+import 'firebase/firestore';
 import firebase, {Auth as auth} from "firebase";
 
 export const Register = () => {
@@ -17,26 +17,6 @@ export const Register = () => {
     const [errorEmail, setErrorEmail] = useState("");
     const [errorPassword, setErrorPassword] = useState("");
 
-    const validation = (e) => {
-
-        e.preventDefault()
-
-        function checkEmail(emailAddress) {
-            const reg = /^[-\w\.]+@([-\w]+\.)+[a-z]+$/i;
-
-            return reg.test(emailAddress);
-        }
-
-        if (checkEmail(email) === false) {
-            setErrorEmail("Email powinien być poprawny");
-        } else
-            setErrorEmail("")
-
-        if (password.length < 6) {
-            setErrorPassword("Hasło jest za krótkie");
-        } else
-            setErrorPassword("")
-    };
 
     const firebaseConfig = {
         apiKey: "AIzaSyD1yLySe8Y4y4K9noGnoDXUUFSz7VWGDZA",
@@ -57,20 +37,40 @@ export const Register = () => {
 
     const btnSignUp = () => {
 
-        const auth = firebase.auth()
+
+        function checkEmail(emailAddress) {
+            const reg = /^[-\w\.]+@([-\w]+\.)+[a-z]+$/i;
+
+            return reg.test(emailAddress);
+        }
+
+        if (checkEmail(email) === false) {
+            setErrorEmail("Email powinien być poprawny");
+        } else
+            setErrorEmail("")
+
+        if (password.length < 6) {
+            setErrorPassword("Hasło jest za krótkie");
+        } else
+            setErrorPassword("")
+
+        if ( checkEmail(email) === true && password.length >= 6 && password===repeatPassword) {
+
+            const auth = firebase.auth()
 
 
-        const promise = auth.createUserWithEmailAndPassword(email, password);
-        promise.catch(e => console.log(e.message));
+            const promise = auth.createUserWithEmailAndPassword(email, password)
+            promise.then(e=> console.log(e))
 
-
+            promise.catch(e => console.log(e.message));
+        }
     };
 
 //RealTime listener
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
             console.log(firebaseUser);
-            return <Redirect to='/'  />
+
 
         } else {
             console.log("not logged in")
@@ -88,7 +88,7 @@ export const Register = () => {
                     <span className=" decorationImage"> </span>
                 </div>
             </div>
-            <form className=" register" onClick={validation}>
+            <form className=" register" onSubmit={btnSignUp}>
                 <div className="row registerForm ">
                     <label className="col-3 registerForm__data">
                         Email:
@@ -108,7 +108,7 @@ export const Register = () => {
                 </div>
                 <div className="row registerForm__btns  ">
                     <input className="col-1 registerForm__btn__register  btn" type="submit" value="Załóż konto"
-                           onClick={btnSignUp}/>
+                           />
                     <div>Zalogowany</div>
                     <Link to={"/signIn"} className=" registerForm__btn__log btn">Zaloguj się </Link>
                 </div>
