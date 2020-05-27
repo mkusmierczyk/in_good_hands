@@ -1,12 +1,13 @@
 import React, {Component, useState} from "react";
 import ReactDOM from "react-dom";
 import {BrowserRouter, HashRouter, Link, Route} from "react-router-dom";
-import firebase from "firebase";
+import firebase from "firebase/app";
 
 
 export const HeaderSignInLog = () => {
 
     const [hideLogout, setHideLogout] = useState("")
+    const [userEmail, setUserEmail]=useState("")
 
     const firebaseConfig = {
         apiKey: "AIzaSyD1yLySe8Y4y4K9noGnoDXUUFSz7VWGDZA",
@@ -28,7 +29,8 @@ export const HeaderSignInLog = () => {
 
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
-            console.log(firebaseUser);
+            console.log(firebaseUser, "czy to to");
+            setUserEmail(firebaseUser.email)
             setHideLogout("")
         } else {
             console.log("not logged in")
@@ -36,13 +38,14 @@ export const HeaderSignInLog = () => {
         }
     });
 
+
     const btnLogout = () => {
         firebase.auth().signOut();
     }
 
     let loginDiv;
     if (hideLogout === "") {
-        loginDiv = <div className="col-12 header__content__signInLog" id="signInLog"> <button className={`btn__logout btn col-1`} onClick={btnLogout}> Wyloguj</button></div>;
+        loginDiv = <div className="col-12 header__content__signInLog" id="signInLog"><p>Witaj {userEmail}</p> <button className={`btn__logout btn col-1`} onClick={btnLogout}> Wyloguj</button></div>;
     } else {
         loginDiv = <div className="col-12 header__content__signInLog" id="signInLog"><Link to={"/signIn"} className=" header__content__log">Zaloguj </Link>
         <Link to={"/register"} className=" header__content__signIn"> Załóż konto </Link></div>

@@ -3,7 +3,7 @@ import {HeaderSignInLog} from "../home/header/headerSignInLog";
 import {HeaderMenu} from "../home/header/headerMenu";
 import useInput from "../hooks/useInput";
 import {Link} from "react-router-dom";
-import firebase, {Auth as auth} from "firebase";
+import firebase, {Auth as auth} from "firebase/app";
 
 
 export const SignIn = () => {
@@ -15,8 +15,25 @@ export const SignIn = () => {
     const [errorPassword, setErrorPassword] = useState("")
 
 
+    const firebaseConfig = {
+        apiKey: "AIzaSyD1yLySe8Y4y4K9noGnoDXUUFSz7VWGDZA",
+        authDomain: "in-good-hands-c41d2.firebaseapp.com",
+        databaseURL: "https://in-good-hands-c41d2.firebaseio.com",
+        projectId: "in-good-hands-c41d2",
+        storageBucket: "in-good-hands-c41d2.appspot.com",
+        messagingSenderId: "639688250702",
+        appId: "1:639688250702:web:08a5da78f8fc1f0f1f7a1f",
+        measurementId: "G-WZZ4J4NWHE"
+    };
+// Initialize Firebase
 
-    const validation = (e) => {
+    if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    }
+
+
+    const btnLogin = (e) => {
         e.preventDefault()
 
         function checkEmail(emailAddress) {
@@ -38,45 +55,16 @@ export const SignIn = () => {
             setErrorPassword("")
 
 
-    }
+
+            const auth = firebase.auth();
 
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyD1yLySe8Y4y4K9noGnoDXUUFSz7VWGDZA",
-        authDomain: "in-good-hands-c41d2.firebaseapp.com",
-        databaseURL: "https://in-good-hands-c41d2.firebaseio.com",
-        projectId: "in-good-hands-c41d2",
-        storageBucket: "in-good-hands-c41d2.appspot.com",
-        messagingSenderId: "639688250702",
-        appId: "1:639688250702:web:08a5da78f8fc1f0f1f7a1f",
-        measurementId: "G-WZZ4J4NWHE"
+            const promise = auth.signInWithEmailAndPassword(email, password);
+            promise.catch(e => console.log(e.message));
+
+
     };
-// Initialize Firebase
 
-    if (!firebase.apps.length) {
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-    }
-
-
-    const btnLogin = () => {
-
-        const auth = firebase.auth();
-
-
-        const promise = auth.signInWithEmailAndPassword(email, password);
-        promise.catch(e => console.log(e.message));
-
-    }
-
-
-
-
-//Logout
-    const btnLogout = () => {
-        firebase.auth().signOut();
-
-    }
 
     return (<>
         <div className="container">
@@ -91,7 +79,7 @@ export const SignIn = () => {
                     <span className=" decorationImage"> </span>
                 </div>
             </div>
-            <form className=" register" onClick={validation}>
+            <form className=" register" onSubmit={btnLogin}>
                 <div className="row registerForm ">
                     <label className="col-3 registerForm__data">
                         Email:
@@ -111,7 +99,7 @@ export const SignIn = () => {
                     <Link to={"/register"} className={`col-1 registerForm__btn__register btn`}> Załóż konto </Link>
 
                     <input className=" col-1 registerForm__btn__log btn " type="submit" value="Zaloguj się"
-                           onClick={btnLogin}/>
+                    />
                 </div>
             </form>
 

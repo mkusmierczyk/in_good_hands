@@ -4,10 +4,9 @@ import {HeaderMenu} from "../home/header/headerMenu";
 import useInput from "../hooks/useInput";
 import {Link} from "react-router-dom";
 
-import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'
-import {Auth as auth} from "firebase";
+import firebase, {Auth as auth} from "firebase";
 
 
 export const Register = () => {
@@ -58,7 +57,7 @@ export const Register = () => {
 
     if (!firebase.apps.length) {
         firebase.initializeApp(firebaseConfig);
-        firebase.analytics()
+        firebase.analytics();
     }
 
 
@@ -69,6 +68,10 @@ export const Register = () => {
 
         const promise = auth.createUserWithEmailAndPassword(email, password);
         promise.catch(e => console.log(e.message));
+
+        setEmail("")
+        setPassword("")
+        setRepeatPassword("")
 
     };
 

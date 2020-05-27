@@ -6,12 +6,18 @@
     margin-right: 2.2rem;
   }
 
-  a, button{
+  a,p, button{
     margin: 48px 25px 34px 0;
     background-color: $white;
     text-decoration: none;
     color: $complementary_font_color;
     border:solid 1px white;
     font-family: $text_font;
+  }
+
+  p{
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
   }
 }

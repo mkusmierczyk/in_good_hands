@@ -177,7 +177,7 @@ export const WhoWeHelp = () => {
     const paginate= pageNumber=> setCurrentPage(pageNumber)
 
 
-    console.log(currentElem)
+
     return (<>
             <div className="row whoWeHelp" id="fund">
                 <div className="col-12 WhoWeHelp__header ">

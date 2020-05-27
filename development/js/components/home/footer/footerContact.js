@@ -50,6 +50,7 @@ export const FooterContact = () => {
             message: message,
         };
 
+
         //Connect with server
 
             fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
