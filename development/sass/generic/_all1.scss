@@ -5,8 +5,6 @@ body {
   color:$main_font_color;
 }
 
-
-
 .btn{
   background-color: $white;
   border-radius:  1px solid $complementary_font_color;
@@ -15,11 +13,8 @@ body {
     text-decoration: none;
     font-size: 2rem;
     text-align: center;
-
-
   }
 }
-
 
 .decorationImage{
 
@@ -27,7 +22,6 @@ body {
     background-size: cover;
     background: url('/../../images/assets/Decoration.svg') no-repeat center;
     height: 7rem;
-
 }
 
 .title{
@@ -43,8 +37,6 @@ body {
   font-size: 0.7rem;
   color:red;
   font-weight: bold;
-
-
 }
 
 .formSent{
@@ -57,7 +49,6 @@ font-weight: bold;
     display: block;
     margin-top: 0.5rem;
   }
-
 }
 
 .hide{
