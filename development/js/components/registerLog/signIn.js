@@ -2,7 +2,7 @@ import React, {Component, useState} from "react";
 import {HeaderSignInLog} from "../home/header/headerSignInLog";
 import {HeaderMenu} from "../home/header/headerMenu";
 import useInput from "../hooks/useInput";
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 import firebase, {Auth as auth} from "firebase/app";
 
 export const SignIn = () => {
@@ -23,16 +23,13 @@ export const SignIn = () => {
     };
 // Initialize Firebase
 
-    if (!firebase.apps.length) {
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-    }
+
+
     const btnLogin = (e) => {
         e.preventDefault()
 
         function checkEmail(emailAddress) {
             const reg = /^[-\w\.]+@([-\w]+\.)+[a-z]+$/i;
-
             return reg.test(emailAddress);
         }
 
@@ -45,18 +42,16 @@ export const SignIn = () => {
 
         if (password.length < 6) {
             setErrorPassword("Hasło jest za krótkie");
-        } else
-            setErrorPassword("")
+        } else{setErrorPassword("")}
 
-
-
+        if ( checkEmail(email) === true && password.length >= 6){
             const auth = firebase.auth();
 
-
-            const promise = auth.signInWithEmailAndPassword(email, password);
+        const promise = auth.signInWithEmailAndPassword(email, password);
+        promise.then(e=> window.location.replace("/"))
             promise.catch(e => console.log(e.message));
 
-
+        }
     };
 
     return (<>

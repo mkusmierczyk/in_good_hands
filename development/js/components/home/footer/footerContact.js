@@ -27,7 +27,6 @@ export const FooterContact = () => {
             return reg.test(emailAddress);
         }
 
-
         if (name.indexOf(" ") !== -1) {
             setErrorName("Imię powinno być jednym wyrazem")}
         else
@@ -43,16 +42,14 @@ export const FooterContact = () => {
         else
             setErrorMessage("")
 
-        if (errorName === "" ||errorEmail===""||errorMessage ===""){
+        if (name.indexOf(" ") === -1 && checkEmail(email) === true && message.length >= 120){
         const formToSend = {
             name: name,
             email: email,
             message: message,
         };
 
-
         //Connect with server
-
             fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
 
                 method: "POST",
@@ -64,6 +61,7 @@ export const FooterContact = () => {
                 .then(resp => setSendForm(resp))
 
                 .catch(err => setErrorServer(err))}
+
     };
 
 
