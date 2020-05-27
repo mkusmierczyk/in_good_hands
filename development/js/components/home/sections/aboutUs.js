@@ -2,12 +2,9 @@ import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import {BrowserRouter, HashRouter, Link, Route} from "react-router-dom";
 
-
 export const AboutUs = () => {
-
     return (<>
         <div className="row aboutUs" id = "aboutUs">
-
             <div className="col-6 aboutUs__content ">
                 <div className="aboutUs__content_title title">
                     <h1> O nas </h1>
@@ -21,8 +18,6 @@ export const AboutUs = () => {
                     <img src="../../../../images/assets/Signature.svg"/>
                 </div>
             </div>
-
-
             <div className="col-6  aboutUs__picture"> </div>
         </div>
     </>)

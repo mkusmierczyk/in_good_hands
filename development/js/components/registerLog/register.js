@@ -3,23 +3,18 @@ import {HeaderSignInLog} from "../home/header/headerSignInLog";
 import {HeaderMenu} from "../home/header/headerMenu";
 import useInput from "../hooks/useInput";
 import {Link} from "react-router-dom";
-
 import 'firebase/auth'
 import 'firebase/firestore'
 import firebase, {Auth as auth} from "firebase";
 
-
 export const Register = () => {
-
 
     const [email, setEmail] = useInput("");
     const [password, setPassword] = useInput("");
     const [repeatPassword, setRepeatPassword] = useInput("");
 
-
     const [errorEmail, setErrorEmail] = useState("");
     const [errorPassword, setErrorPassword] = useState("");
-
 
     const validation = (e) => {
 
@@ -42,7 +37,6 @@ export const Register = () => {
             setErrorPassword("")
     };
 
-
     const firebaseConfig = {
         apiKey: "AIzaSyD1yLySe8Y4y4K9noGnoDXUUFSz7VWGDZA",
         authDomain: "in-good-hands-c41d2.firebaseapp.com",
@@ -60,7 +54,6 @@ export const Register = () => {
         firebase.analytics();
     }
 
-
     const btnSignUp = () => {
 
         const auth = firebase.auth()
@@ -72,9 +65,7 @@ export const Register = () => {
         setEmail("")
         setPassword("")
         setRepeatPassword("")
-
     };
-
 
 //RealTime listener
     firebase.auth().onAuthStateChanged(firebaseUser => {
@@ -89,11 +80,8 @@ export const Register = () => {
 
     return (<>
         <div className="container">
-
             <HeaderSignInLog/>
             <HeaderMenu/>
-
-
             <div className="row">
                 <div className="col-12  title">
                     <h1> Załóż konto!</h1>
@@ -106,22 +94,18 @@ export const Register = () => {
                         Email:
                         <input type="email" name="email" placeholder="abc@xyz.pl" {...setEmail}/>
                         {errorEmail.length > 0 && <p className="error">{errorEmail}</p>}
-
                     </label>
                     <label className=" col-3 registerForm__data">
                         Hasło :
                         <input type="password" name="password" {...setPassword}/>
                         {errorPassword.length > 0 && <p className="error">{errorPassword}</p>}
-
                     </label>
                     <label className=" col-3 registerForm__data" {...setRepeatPassword}>
                         Powtórz Hasło :
                         <input type="password" name="repeatPassword"/>
                         {password !== repeatPassword && <p className="error">Hasła są różne</p>}
-
                     </label>
                 </div>
-
                 <div className="row registerForm__btns  ">
                     <input className="col-1 registerForm__btn__register  btn" type="submit" value="Załóż konto"
                            onClick={btnSignUp}/>
@@ -130,7 +114,5 @@ export const Register = () => {
                 </div>
             </form>
         </div>
-
-
     </>)
 }

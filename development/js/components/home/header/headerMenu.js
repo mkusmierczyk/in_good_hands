@@ -4,9 +4,7 @@ import {Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, s
 import {HashLink} from 'react-router-hash-link';
 
 export const HeaderMenu = () => {
-
     const [menuOption, setMenuOption] = useState("")
-
 
     useEffect(() => {
         if (window.location.href === "http://localhost:3001/#/signIn" || window.location.href === "http://localhost:3001/#/register") {
@@ -14,7 +12,6 @@ export const HeaderMenu = () => {
         } else setMenuOption("");
 
     }, [])
-
 
     return (<>
 
@@ -33,6 +30,5 @@ export const HeaderMenu = () => {
             <HashLink className="header__content__menu__link" to={`${menuOption}#contact`} smooth={true}
                       duration={1000}>Kontakt</HashLink>
         </ul>
-
     </>)
 }

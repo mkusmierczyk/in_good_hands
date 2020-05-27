@@ -5,15 +5,11 @@ import useInput from "../hooks/useInput";
 import {Link} from "react-router-dom";
 import firebase, {Auth as auth} from "firebase/app";
 
-
 export const SignIn = () => {
-
     const [email, setEmail] = useInput("")
     const [password, setPassword] = useInput("")
-
     const [errorEmail, setErrorEmail] = useState("")
     const [errorPassword, setErrorPassword] = useState("")
-
 
     const firebaseConfig = {
         apiKey: "AIzaSyD1yLySe8Y4y4K9noGnoDXUUFSz7VWGDZA",
@@ -31,8 +27,6 @@ export const SignIn = () => {
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
     }
-
-
     const btnLogin = (e) => {
         e.preventDefault()
 
@@ -65,7 +59,6 @@ export const SignIn = () => {
 
     };
 
-
     return (<>
         <div className="container">
 
@@ -85,16 +78,13 @@ export const SignIn = () => {
                         Email:
                         <input type="email" name="email" placeholder="abc@xyz.pl" {...setEmail}/>
                         {errorEmail.length > 0 && <p className="error">{errorEmail}</p>}
-
                     </label>
                     <label className=" col-3 registerForm__data">
                         Hasło :
                         <input type="password" name="password" {...setPassword}/>
                         {errorPassword.length > 0 && <p className="error">{errorPassword}</p>}
                     </label>
-
                 </div>
-
                 <div className="row registerForm__btns  ">
                     <Link to={"/register"} className={`col-1 registerForm__btn__register btn`}> Załóż konto </Link>
 
@@ -102,7 +92,6 @@ export const SignIn = () => {
                     />
                 </div>
             </form>
-
         </div>
     </>)
 }

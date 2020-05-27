@@ -5,7 +5,6 @@ import {Pagination} from "./whoWeHelpPagination";
 
 export const WhoWeHelp = () => {
 
-
     //Start Zmian
     const alternateSection = {
         whoWeHelp: [

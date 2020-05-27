@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import {BrowserRouter, HashRouter, Link, Route} from "react-router-dom";
 import firebase from "firebase/app";
 
-
 export const HeaderSignInLog = () => {
 
     const [hideLogout, setHideLogout] = useState("")
@@ -20,12 +19,10 @@ export const HeaderSignInLog = () => {
         measurementId: "G-WZZ4J4NWHE"
     };
 
-
     if (!firebase.apps.length) {
         firebase.initializeApp(firebaseConfig);
         firebase.analytics()
     }
-
 
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
@@ -37,7 +34,6 @@ export const HeaderSignInLog = () => {
             setHideLogout("hide")
         }
     });
-
 
     const btnLogout = () => {
         firebase.auth().signOut();

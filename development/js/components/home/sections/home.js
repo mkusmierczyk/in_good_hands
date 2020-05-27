@@ -8,11 +8,7 @@ import {WhoWeHelp} from "./whoWeHelp";
 import {AboutUs} from "./aboutUs";
 import {Footer} from "../footer/footer";
 
-
-
 export const Home = () => {
-
-
     return (
         <div className="container">
             <Header />
@@ -21,7 +17,6 @@ export const Home = () => {
             <AboutUs/>
             <WhoWeHelp/>
             <Footer />
-
         </div>
 
     )

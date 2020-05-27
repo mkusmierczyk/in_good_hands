@@ -5,9 +5,7 @@ import {HeaderSignInLog} from "./headerSignInLog";
 import {HeaderMenu} from "./headerMenu";
 import {StartHelp} from "./headerStartHelp";
 
-
 export const Header = () => {
-
     return (<>
             <div className="row header">
                 <div className="col-6 header__picture"> </div>
