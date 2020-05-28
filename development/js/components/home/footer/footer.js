@@ -5,14 +5,14 @@ import {FooterContact} from "./footerContact";
 import {FooterCopyright} from "./footerCopyright";
 
 
-export const Footer = ({checkEmail}) => {
+export const Footer = () => {
 
 
 
     return (<>
         <div className="row footer" id="contact">
             <div className="col-8 footer__picture"> </div>
-            <FooterContact checkEmail={checkEmail} />
+            <FooterContact  />
         </div>
         <FooterCopyright/>
     </>)

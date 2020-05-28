@@ -11,19 +11,6 @@ export const SignIn = () => {
     const [errorEmail, setErrorEmail] = useState("")
     const [errorPassword, setErrorPassword] = useState("")
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyD1yLySe8Y4y4K9noGnoDXUUFSz7VWGDZA",
-        authDomain: "in-good-hands-c41d2.firebaseapp.com",
-        databaseURL: "https://in-good-hands-c41d2.firebaseio.com",
-        projectId: "in-good-hands-c41d2",
-        storageBucket: "in-good-hands-c41d2.appspot.com",
-        messagingSenderId: "639688250702",
-        appId: "1:639688250702:web:08a5da78f8fc1f0f1f7a1f",
-        measurementId: "G-WZZ4J4NWHE"
-    };
-// Initialize Firebase
-
-
 
     const btnLogin = (e) => {
         e.preventDefault()
@@ -56,11 +43,8 @@ export const SignIn = () => {
 
     return (<>
         <div className="container">
-
             <HeaderSignInLog/>
             <HeaderMenu/>
-
-
             <div className="row">
                 <div className="col-12  title">
                     <h1> Zaloguj się</h1>

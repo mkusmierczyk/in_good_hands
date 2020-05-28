@@ -1,0 +1,23 @@
+.logOut{
+  span{
+    display: block;
+  }
+}
+
+.logOut__btn__menu {
+  display: flex;
+  justify-content: center;
+
+
+  a {
+    color:$complementary_font_color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    font-size: 1rem;
+    text-decoration: none;
+    height: 3rem;
+    border: 1px solid $complementary_font_color
+  }
+}

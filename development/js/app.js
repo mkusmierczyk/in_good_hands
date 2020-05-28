@@ -5,6 +5,8 @@ import '../sass/main.scss'
 import {Home} from "./components/home/sections/home";
 import {Register} from "./components/registerLog/register";
 import {SignIn} from "./components/registerLog/signIn";
+import {LogOut} from "./components/registerLog/logOut";
+import {GivingForm} from "./components/home/sections/givingForm";
 
 
 const App = () => {
@@ -14,7 +16,8 @@ const App = () => {
             <Route exact path="/" component={Home}/>
             <Route exact path="/register" component={Register}/>
             <Route exact path="/signIn" component={SignIn}/>
-
+            <Route exact path="/logOut" component={LogOut}/>
+            <Route exact path="/givingForm" component={GivingForm}/>
         </HashRouter>
 
     )

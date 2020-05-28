@@ -1,4 +1,4 @@
-import React, {Component, useState} from "react";
+import React, {Component, useEffect, useState} from "react";
 import {HeaderSignInLog} from "../home/header/headerSignInLog";
 import {HeaderMenu} from "../home/header/headerMenu";
 import useInput from "../hooks/useInput";
@@ -59,23 +59,29 @@ export const Register = () => {
             const auth = firebase.auth()
 
 
+            let emailLogIn = email;
+            let passwordLogIn = password
+
             const promise = auth.createUserWithEmailAndPassword(email, password)
-            promise.then(e=> console.log(e))
+            promise.then(e=> window.location.replace("#/"))
 
             promise.catch(e => console.log(e.message));
         }
     };
 
-//RealTime listener
-    firebase.auth().onAuthStateChanged(firebaseUser => {
-        if (firebaseUser) {
-            console.log(firebaseUser);
 
 
-        } else {
-            console.log("not logged in")
-        }
-    });
+
+// //RealTime listener
+//     firebase.auth().onAuthStateChanged(firebaseUser => {
+//         if (firebaseUser) {
+//             console.log(firebaseUser);
+//
+//
+//         } else {
+//             console.log("not logged in")
+//         }
+//     });
 
 
     return (<>
@@ -107,9 +113,7 @@ export const Register = () => {
                     </label>
                 </div>
                 <div className="row registerForm__btns  ">
-                    <input className="col-1 registerForm__btn__register  btn" type="submit" value="Załóż konto"
-                           />
-                    <div>Zalogowany</div>
+                    <input className="col-1 registerForm__btn__register  btn" type="submit" value="Załóż konto"/>
                     <Link to={"/signIn"} className=" registerForm__btn__log btn">Zaloguj się </Link>
                 </div>
             </form>

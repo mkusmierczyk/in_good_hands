@@ -3,11 +3,18 @@ $column-base-width: 100% / $columns;
 
 .container {
   width: 100%;
-  max-width: 1352px;
+  max-width: 1652px;
   margin: 0 auto;
 
-  .row {
-    display: flex;
+
+
+    .row {
+      display: flex;
+  @media  (max-width: 800px){
+
+    flex-wrap: wrap;
+
+  }
 
     [class*='col-'] {
       min-height: 1px;
