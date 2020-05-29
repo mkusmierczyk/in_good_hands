@@ -6,7 +6,8 @@ import {Home} from "./components/home/sections/home";
 import {Register} from "./components/registerLog/register";
 import {SignIn} from "./components/registerLog/signIn";
 import {LogOut} from "./components/registerLog/logOut";
-import {GivingForm} from "./components/home/sections/givingForm";
+
+import {Giving} from "./components/home/givingForm/giving";
 
 
 const App = () => {
@@ -17,7 +18,7 @@ const App = () => {
             <Route exact path="/register" component={Register}/>
             <Route exact path="/signIn" component={SignIn}/>
             <Route exact path="/logOut" component={LogOut}/>
-            <Route exact path="/givingForm" component={GivingForm}/>
+            <Route exact path="/givingForm" component={Giving}/>
         </HashRouter>
 
     )
