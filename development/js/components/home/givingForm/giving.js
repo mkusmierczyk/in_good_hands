@@ -16,6 +16,7 @@ export const Giving = () => {
     const [showStep, setShowStep] = useState(1);
     const [dataStep1, setDataStep1] = useState("brak");
     const [dataStep2, setDataStep2] = useState("brak");
+    const [dataStep3, setDataStep3] = useState("brak");
 
 
     const prevBtn = () => {
@@ -35,6 +36,9 @@ export const Giving = () => {
         return setDataStep2(bags)
     }
 
+    const step3Data = (receipt) => {
+        return setDataStep3(receipt)
+    }
 
 
     return (<>
@@ -55,8 +59,8 @@ export const Giving = () => {
                             <div className="col-2"></div>
                             {(showStep === 1) && <Step1 step1Data={step1Data}/>}
                             {(showStep === 2) && <Step2 step2Data={step2Data}/>}
-                            {(showStep === 3) && <Step3/>}
-                            {(showStep === 4) && <Step4 dataStep1={dataStep1}/>}
+                            {(showStep === 3) && <Step3 step3Data = {step3Data}/>}
+                            {(showStep === 4) && <Step4 dataStep1={dataStep1} dataStep2={dataStep2} dataStep3={dataStep3}/>}
 
                         </div>
                         <div className="row">
