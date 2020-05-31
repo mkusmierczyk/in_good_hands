@@ -13,20 +13,27 @@ import {Step4} from "./givingFormStep4";
 
 
 export const Giving = () => {
-    const [showStep, setShowStep] = useState(1)
+    const [showStep, setShowStep] = useState(1);
+    const [dataStep1, setDataStep1] = useState("brak");
+    const [dataStep2, setDataStep2] = useState("brak");
 
 
-    const prevBtn = ()=>{
-        showStep===1 ? setShowStep(1): setShowStep(showStep-1)
-        console.log(showStep);
+    const prevBtn = () => {
+        showStep === 1 ? setShowStep(1) : setShowStep(showStep - 1)
+    };
+
+    const nextBtn = () => {
+        showStep === 4 ? setShowStep(4) : setShowStep(showStep + 1)
+    };
+
+
+    const step1Data = (checkboxes) => {
+        return setDataStep1(checkboxes)
     }
 
-    const nextBtn = ()=>{
-        showStep===4 ? setShowStep(4): setShowStep(showStep+1)
-        console.log(showStep);
+    const step2Data = (bags) => {
+        return setDataStep2(bags)
     }
-
-
 
 
 
@@ -38,23 +45,23 @@ export const Giving = () => {
                     <div className="col-6 giving__content">
                         <HeaderSignInLog/>
                         <HeaderMenu/>
-                        <GivingMainContent />
+                        <GivingMainContent/>
                     </div>
                 </div>
                 <Banner showStep={showStep}/>
                 <div className="row giving__form">
                     <div className="col-7 giving__form__info">
                         <div className="row">
-                            <div className="col-2"> </div>
-                            { (showStep ===1)&& <Step1/>}
-                            { (showStep ===2)&& <Step2/>}
-                            { (showStep ===3)&& <Step3/>}
-                            { (showStep ===4)&& <Step4/>}
+                            <div className="col-2"></div>
+                            {(showStep === 1) && <Step1 step1Data={step1Data}/>}
+                            {(showStep === 2) && <Step2 step2Data={step2Data}/>}
+                            {(showStep === 3) && <Step3/>}
+                            {(showStep === 4) && <Step4 dataStep1={dataStep1}/>}
 
                         </div>
                         <div className="row">
                             <div className="col-2"></div>
-                            <PrevNextBtn showStep={showStep} prevBtn={prevBtn} nextBtn = {nextBtn}/>
+                            <PrevNextBtn showStep={showStep} prevBtn={prevBtn} nextBtn={nextBtn}/>
                         </div>
                     </div>
                 </div>

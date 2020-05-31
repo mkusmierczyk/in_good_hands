@@ -1,7 +1,17 @@
-import React, {Component} from "react";
+import React, {Component, useEffect} from "react";
+import useInput from "../../hooks/useInput";
 
 
-export const Step2 = () => {
+export const Step2 = ({step2Data}) => {
+
+
+    const [bags, setBags] =useInput(false)
+
+
+    useEffect(()=>{
+        step2Data(bags)
+
+    },[bags])
 
 
 
@@ -16,8 +26,8 @@ export const Step2 = () => {
                     <p>Liczba 60l worków</p>
                     <div className="giving__form__info__step__select">
 
-                        <select>
-                            <option className="hide" value="0"> </option>
+                        <select {...setBags}>
+                            <option  value="0"> </option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
