@@ -1,0 +1,45 @@
+.giving__form__info__step__select {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  align-self: center;
+  height: 2rem;
+
+  p {
+    margin: 2rem 1rem 0 0;
+  }
+
+//  :last-child:after {
+//    content: "";
+//    display: flex;
+//    padding-top: 6px;
+//    height: 2rem;
+//    width: 3rem;
+//    background: url('/../../../images/assets/Icon-Arrow-Up.svg') no-repeat;
+//    :hover {
+//    background: url('/../../../images/assets/Icon-Arrow-Down.svg') no-repeat;
+//      background-color: red;
+//  }
+//}
+
+:last-child:before {
+  content: "--Wybierz--";
+  display: flex;
+  padding-top: 6px;
+  height: 1.5rem;
+  width: 9rem;
+  border: 1px solid $complementary_font_color;
+  border-right-color: $background_color;
+
+}
+
+select {
+  width: 3rem;
+  height: 2rem;
+  border-left-color: $background_color;
+  background-color: $background_color;
+  
+}
+
+}
