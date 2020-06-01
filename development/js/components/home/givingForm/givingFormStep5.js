@@ -21,7 +21,7 @@ export const Step5 = ({dataStep1, dataStep2, dataStep3, dataStep4}) => {
                 <p> dla lokalizacji {dataStep3[0]}</p>
             </div>
 
-            <div className="giving__form__info__step3__address">
+            <div className="giving__form__info__step5__address">
                 <p> Adres </p>
                 <h2>Ulica:</h2>
                 <span>{dataStep4[0]}</span>
@@ -33,7 +33,7 @@ export const Step5 = ({dataStep1, dataStep2, dataStep3, dataStep4}) => {
                 <span>{dataStep4[3]}</span>
             </div>
 
-            <div className="giving__form__info__step3__receiptDate">
+            <div className="giving__form__info__step5__receiptDate">
                 <h2> Termin Odbioru</h2>
                 <h2>Data:</h2>
                 <span>{dataStep4[4]}</span>
