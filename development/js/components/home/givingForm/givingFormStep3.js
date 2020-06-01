@@ -3,31 +3,31 @@ import useInput from "../../hooks/useInput";
 
 
 export const Step3 = ({step3Data}) => {
-    const [city, setCity] = useInput("")
-    const[org,setOrg]=useInput("")
+    const [city, setCity] = useInput("");
+    const[org,setOrg]=useInput("");
 
-    const [kids, setKids] = useState(false)
-    const handleClickKids = () => setKids(!kids)
+    const [kids, setKids] = useState(false);
+    const handleClickKids = () => setKids(!kids);
 
-    const [mothers, setMothers] = useState(false)
-    const handleMothers = () => setMothers(!mothers)
+    const [mothers, setMothers] = useState(false);
+    const handleMothers = () => setMothers(!mothers);
 
-    const [homeless, setHomeless] = useState(false)
-    const handleHomeless = () => setHomeless(!homeless)
+    const [homeless, setHomeless] = useState(false);
+    const handleHomeless = () => setHomeless(!homeless);
 
-    const [handicap, setHandicap] = useState(false)
-    const handleHandicap = () => setHandicap(!handicap)
+    const [handicap, setHandicap] = useState(false);
+    const handleHandicap = () => setHandicap(!handicap);
 
-    const [elderly, setElderly] = useState(false)
-    const handleElderly = () => setElderly(!elderly)
+    const [elderly, setElderly] = useState(false);
+    const handleElderly = () => setElderly(!elderly);
 
-    const allData = [city, org, kids, mothers, homeless,handicap,elderly]
+    const allData = [city, org, kids, mothers, homeless,handicap,elderly];
 
 
     useEffect(()=>{
         step3Data(allData)
 
-    },[city, org, kids, mothers, homeless,handicap,elderly])
+    },[city, org, kids, mothers, homeless,handicap,elderly]);
 
     return (
         <>

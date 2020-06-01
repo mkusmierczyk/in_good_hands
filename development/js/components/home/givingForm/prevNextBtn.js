@@ -9,17 +9,19 @@ export const PrevNextBtn = ({showStep, prevBtn, nextBtn}) => {
             <button className=" col-2 giving__form__info__step1__btn " onClick={nextBtn}>Dalej</button>
         </div>
         }
-        {showStep > 1 && showStep < 4 &&
+        {showStep > 1 && showStep < 5 &&
         <div className=" col-10 giving__form__info__step1--btn ">
             <button className=" col-2 giving__form__info__step1__btn " onClick={prevBtn}>Wstecz</button>
             <button className=" col-2 giving__form__info__step1__btn " onClick={nextBtn}>Dalej</button>
         </div>
         }
 
-        {showStep === 4 && <div className=" col-10 giving__form__info__step1--btn ">
+        {showStep === 5 && <div className=" col-10 giving__form__info__step1--btn ">
             <button className=" col-2 giving__form__info__step1__btn " onClick={prevBtn}>Wstecz</button>
             <button className=" col-2 giving__form__info__step1__btn " onClick={nextBtn}>Potwierdz</button>
         </div>
+        }
+
         }
     </>)
 

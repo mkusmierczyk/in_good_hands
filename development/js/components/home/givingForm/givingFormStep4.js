@@ -21,10 +21,8 @@ export const Step4 = ({step4Data}) => {
     useEffect(()=>{
         step4Data(receipt)
 
-    },[street,city,postalCode,phone,date,hour,comments])
-
-
-
+    },[street,city,postalCode,phone,date,hour,comments]);
+    
 
     return (
         <>

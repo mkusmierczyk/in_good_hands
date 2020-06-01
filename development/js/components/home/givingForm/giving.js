@@ -10,6 +10,8 @@ import {PrevNextBtn} from "./prevNextBtn";
 import {Step2} from "./givingFormStep2";
 import {Step3} from "./givingFormStep3";
 import {Step4} from "./givingFormStep4";
+import {Step5} from "./givingFormStep5";
+import {Step6} from "./givingFormStep6";
 
 
 export const Giving = () => {
@@ -25,24 +27,24 @@ export const Giving = () => {
     };
 
     const nextBtn = () => {
-        showStep === 4 ? setShowStep(4) : setShowStep(showStep + 1)
+        showStep === 6 ? setShowStep(6) : setShowStep(showStep + 1)
     };
 
 
     const step1Data = (checkboxes) => {
         return setDataStep1(checkboxes)
-    }
+    };
 
     const step2Data = (bags) => {
         return setDataStep2(bags)
-    }
+    };
     const step3Data = (receipt) => {
         return setDataStep3(receipt)
-    }
+    };
 
     const step4Data = (receipt) => {
         return setDataStep4(receipt)
-    }
+    };
 
 
     return (<>
@@ -63,10 +65,14 @@ export const Giving = () => {
                             <div className="col-2"></div>
                             {(showStep === 1) && <Step1 step1Data={step1Data}/>}
                             {(showStep === 2) && <Step2 step2Data={step2Data}/>}
-
-                            {(showStep === 3) && <Step3 step3Data={step3Data} />}
-                            {(showStep === 4) && <Step4 step4Data = {step4Data} dataStep1={dataStep1} dataStep2={dataStep2} dataStep3={dataStep3} dataStep4={dataStep4}/>}
-
+                            {(showStep === 3) && <Step3 step3Data={step3Data}/>}
+                            {(showStep === 4) && <Step4 step4Data={step4Data}/>}
+                            {(showStep === 5) && <Step5
+                                dataStep1={dataStep1}
+                                dataStep2={dataStep2}
+                                dataStep3={dataStep3}
+                                dataStep4={dataStep4}/>}
+                            {(showStep === 6) && <Step6/>}
                         </div>
                         <div className="row">
                             <div className="col-2"></div>
@@ -79,4 +85,4 @@ export const Giving = () => {
         </>
 
     )
-}
+};

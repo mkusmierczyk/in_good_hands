@@ -4,29 +4,29 @@ import useInput from "../../hooks/useInput";
 
 export const Step1 = ({step1Data}) => {
 
-    const [clothes, setClothes] = useState(false)
-    const handleClickClothes = () => setClothes(!clothes)
+    const [clothes, setClothes] = useState(false);
+    const handleClickClothes = () => setClothes(!clothes);
 
-    const [clothesNone, setClothesNone] = useState(false)
-    const handleClickNone = () => setClothesNone(!clothesNone)
+    const [clothesNone, setClothesNone] = useState(false);
+    const handleClickNone = () => setClothesNone(!clothesNone);
 
-    const [toys, setToys] = useState(false)
-    const handleClickToys = () => setToys(!toys)
+    const [toys, setToys] = useState(false);
+    const handleClickToys = () => setToys(!toys);
 
-    const [books, setBooks] = useState(false)
-    const handleClickBooks = () => setBooks(!books)
+    const [books, setBooks] = useState(false);
+    const handleClickBooks = () => setBooks(!books);
 
-    const [other, setOther] = useState(false)
-    const handleClickOther = () => setOther(!other)
+    const [other, setOther] = useState(false);
+    const handleClickOther = () => setOther(!other);
 
-    const allCheckboxes = [clothes, clothesNone, toys, books, other]
+    const allCheckboxes = [clothes, clothesNone, toys, books, other];
 
 
 
     useEffect(()=>{
         step1Data(allCheckboxes)
 
-    },[clothes, clothesNone, toys, books, other])
+    },[clothes, clothesNone, toys, books, other]);
 
 
 
@@ -66,4 +66,4 @@ export const Step1 = ({step1Data}) => {
         </>
 
     )
-}
+};

@@ -5,13 +5,13 @@ import useInput from "../../hooks/useInput";
 export const Step2 = ({step2Data}) => {
 
 
-    const [bags, setBags] =useInput(false)
+    const [bags, setBags] =useInput(false);
 
 
     useEffect(()=>{
         step2Data(bags)
 
-    },[bags])
+    },[bags]);
 
 
 
@@ -41,4 +41,4 @@ export const Step2 = ({step2Data}) => {
         </>
 
     )
-}
+};
