@@ -1,0 +1,48 @@
+.giving__form__info__step--subtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.giving__form__info__step3__select select {
+  width: 14rem;
+  height: 2rem;
+  background-color: $background_color;
+  color: $complementary_font_color;
+  margin-bottom: 1rem;
+}
+
+
+.giving__form__info__step3 {
+ margin: 2rem 0 2rem 0;
+  display: flex;
+  flex-grow: revert;
+  flex-wrap: wrap;
+
+
+}
+
+.giving__form__info__step3__checkbox {
+  font-size: 1.3rem;
+  color: $complementary_font_color;
+  border: 1px solid $complementary_font_color;
+  height: 2rem;
+  width: 9rem;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  input {
+    display: none;
+  }
+
+  }
+.true {
+  background-color: #FAD648;
+}
+
+.giving__form__info__step3__description input {
+  margin-top:0.5rem;
+  display: block;
+  width: 60%;
+
+}

@@ -45,34 +45,35 @@ export const Step3 = ({step3Data}) => {
                         <option value="Katowice">Katowice</option>
                     </select>
                 </div>
-                <h1 className="giving__form__info__step__title">Komu Chcesz pomóc</h1>
-                <label className="giving__form__info__step1__checkbox">dzieciom
-                    <input type="checkbox"/>
-                    <span className="checkmark" onClick={handleClickKids}> </span>
+                <h1 className="giving__form__info__step--subtitle">Komu Chcesz pomóc</h1>
+                <div className="giving__form__info__step3">
+                <label className={`giving__form__info__step3__checkbox col-3 ${kids}`}  >dzieciom
+                    <input type="checkbox" onClick={handleClickKids}/>
+
                 </label>
 
-                <label className="giving__form__info__step1__checkbox">samotnym matkom
-                    <input type="checkbox"/>
-                    <span className="checkmark" onClick={handleMothers}> </span>
+                <label className={`giving__form__info__step3__checkbox col-3 ${mothers}`}  >samotnym matkom
+                    <input type="checkbox"onClick={handleMothers}/>
+
                 </label>
 
-                <label className="giving__form__info__step1__checkbox">bezdomnym
-                    <input type="checkbox"/>
-                    <span className="checkmark" onClick={handleHomeless}> </span>
+                <label className={`giving__form__info__step3__checkbox col-3 ${homeless}`} >bezdomnym
+                    <input type="checkbox" onClick={handleHomeless}/>
+
                 </label>
 
-                <label className="giving__form__info__step1__checkbox">niepełnosprawnym
-                    <input type="checkbox"/>
-                    <span className="checkmark" onClick={handleHandicap}> </span>
+                <label className={`giving__form__info__step3__checkbox col-3 ${handicap}`} >niepełnosprawnym
+                    <input type="checkbox"  onClick={handleHandicap}/>
+
                 </label>
 
-                <label className="giving__form__info__step1__checkbox">Osobom starszym
-                    <input type="checkbox"/>
-                    <span className="checkmark" onClick={handleElderly}> </span>
-                </label>
+                <label className={`giving__form__info__step3__checkbox col-3 ${elderly}`}  >Osobom starszym
+                    <input type="checkbox"onClick={handleElderly}/>
 
-                <label htmlFor="org">Wpisz nazwę konkretnej organizacji (opcjonalnie):
-                    <input type="text" id="org" name="org" {...setOrg}/></label>
+                </label>
+                </div>
+                <p className="giving__form__info__step3__description giving__form__info__step--subtitle" >Wpisz nazwę konkretnej organizacji (opcjonalnie):
+                    <input type="text" id="org" name="org" {...setOrg}/></p>
             </div>
 
 

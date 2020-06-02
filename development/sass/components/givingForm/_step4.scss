@@ -1,12 +1,24 @@
 .giving__form__info__step4 {
   display: flex;
   justify-items: right;
+  justify-content: space-between;
 
   label {
     display: flex;
     margin: 2rem 2rem 2rem 0;
     font-size: 1rem;
+    input{
+      background-color: $background_color;
+      border: 1px solid $complementary_font_color;
 
+    }
   }
 }
-
+.giving__form__info__step4--title{
+  font-size:1.2rem;
+}
+.giving__form__info__step4__receiptDate .giving__form__info__step4__address{
+label{
+  margin-bottom: 10px;
+}
+}

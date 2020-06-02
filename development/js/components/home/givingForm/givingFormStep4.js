@@ -1,5 +1,3 @@
-
-
 import React, {Component, useEffect} from "react";
 import useInput from "../../hooks/useInput";
 
@@ -30,8 +28,8 @@ export const Step4 = ({step4Data}) => {
                 <p className="giving__form__info__step__name">Krok 4/4 </p>
                 <h1 className="giving__form__info__step__title">Podaj adres oraz termin odbioru rzecz przez kuriera</h1>
                 <div className="giving__form__info__step4">
-                    <form  className="giving__form__info__step4__address" >
-                        <p> Adres </p>
+                    <form  className="giving__form__info__step4__address col-3" >
+                        <p className="giving__form__info__step4--title"> Adres </p>
                         <label htmlFor="street">Ulica:
                             <input type="text" id="street" name="street" {...setStreet}/></label>
                         <label htmlFor="city">Miasto:
@@ -42,8 +40,8 @@ export const Step4 = ({step4Data}) => {
                             <input type="text" id="phone" name="phone" {...setPhone}/></label>
                     </form>
 
-                    <form  className="giving__form__info__step4__receiptDate" >
-                        <p> Termin Odbioru</p>
+                    <form  className="giving__form__info__step4__receiptDate col-3" >
+                        <p className="giving__form__info__step4--title"> Termin Odbioru</p>
                         <label htmlFor="date" >Data:
                             <input type="text" id="date" name="date" {...setDate}/></label>
                         <label htmlFor="hour">Godzina:
