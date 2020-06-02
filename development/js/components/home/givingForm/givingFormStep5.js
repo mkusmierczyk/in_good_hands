@@ -8,17 +8,49 @@ export const Step5 = ({dataStep1, dataStep2, dataStep3, dataStep4}) => {
     console.log(dataStep3);
     console.log(dataStep4);
 
+    const things = dataStep1
+    if (dataStep1[0] === true) {
+        dataStep1[0] = "ubrania, które nadają się do ponownego użycia"
+    }
+    if (dataStep1[1] === true) {
+        dataStep1[1] = "ubrania, do wyrzucenia"
+    }
+    if (dataStep1[2] === true) {
+        dataStep1[2] = "zabawki"
+    }
+    if (dataStep1[3] === true) {
+        dataStep1[3] = "książki"
+    }
+    if (dataStep1[4] === true) {
+        dataStep1[4] = "Inne"
+    }
+
+    const whom = dataStep3
+    if (dataStep3[2] === true) {
+        dataStep3[2] = "dzieciom"
+    }
+    if (dataStep3[3] === true) {
+        dataStep3[3] = "samotnym matkom"
+    }
+    if (dataStep3[4] === true) {
+        dataStep3[4] = "bezdomnym"
+    }
+    if (dataStep3[5] === true) {
+        dataStep3[5] = "niepełnosprawnym"
+    }
+    if (dataStep3[6] === true) {
+        dataStep3[6] = "osobom starszym"
+    }
 
     return (
         <>
-
             <div className=" col-10 giving__form__info__step step5 ">
                 <h1 className="giving__form__info__step__title">Podsumowanie Twojej darowizny</h1>
 
 
                 <div className="giving__form__info__step5__localization ">
                     <p>Oddajesz</p>
-                    <p><img src="../../../../images/assets/Icon-1.svg"/> {dataStep2} worki {dataStep1}</p>
+                    <p><img src="../../../../images/assets/Icon-1.svg"/> {dataStep2} worki, {things} <span>{dataStep3[2]}</span><span>{dataStep3[3]}</span><span>{dataStep3[4]}</span><span>{dataStep3[5]}</span><span>{dataStep3[6]}</span></p>
                     <p><img src="../../../../images/assets/Icon-4.svg"/> dla lokalizacji {dataStep3[0]}</p>
                 </div>
 

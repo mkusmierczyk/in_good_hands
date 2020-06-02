@@ -22,7 +22,7 @@ export const PrevNextBtn = ({showStep, prevBtn, nextBtn}) => {
         </div>
         }
 
-        }
+
     </>)
 
 }

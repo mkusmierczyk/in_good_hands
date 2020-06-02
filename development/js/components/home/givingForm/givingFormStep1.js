@@ -21,8 +21,6 @@ export const Step1 = ({step1Data}) => {
 
     const allCheckboxes = [clothes, clothesNone, toys, books, other];
 
-
-
     useEffect(()=>{
         step1Data(allCheckboxes)
 
