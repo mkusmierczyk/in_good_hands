@@ -7,7 +7,7 @@ export const HeaderMenu = () => {
     const [menuOption, setMenuOption] = useState("")
 
     useEffect(() => {
-        if (window.location.href === "http://localhost:3001/#/signIn" || window.location.href === "http://localhost:3001/#/register") {
+        if (window.location.href === "http://localhost:3001/signIn" || window.location.href === "http://localhost:3001/register") {
             setMenuOption("/")
         } else setMenuOption("");
 

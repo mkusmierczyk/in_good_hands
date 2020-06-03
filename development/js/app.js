@@ -13,13 +13,13 @@ import {Giving} from "./components/home/givingForm/giving";
 const App = () => {
     return (
 
-        <HashRouter>
+        <BrowserRouter>
             <Route exact path="/" component={Home}/>
             <Route exact path="/register" component={Register}/>
             <Route exact path="/signIn" component={SignIn}/>
             <Route exact path="/logOut" component={LogOut}/>
             <Route exact path="/givingForm" component={Giving}/>
-        </HashRouter>
+        </BrowserRouter>
 
     )
 }
