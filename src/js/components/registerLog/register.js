@@ -4,7 +4,6 @@ import {HeaderMenu} from "../home/header/headerMenu";
 import useInput from "../hooks/useInput";
 import {Link} from "react-router-dom";
 import Decoration from "../../../images/assets/Decoration.svg"
-
 import 'firebase/firestore';
 import firebase, {Auth as auth} from "firebase";
 
@@ -49,7 +48,6 @@ export const Register = () => {
             let emailLogIn = email;
             let passwordLogIn = password
             const promise = auth.createUserWithEmailAndPassword(email, password)
-            promise.then(e=> window.location.replace("#/"))
             promise.catch(e => console.log(e.message));
         }
     };
@@ -63,7 +61,7 @@ export const Register = () => {
             <div className="row">
                 <div className="col-12 title">
                     <h1> Załóż konto!</h1>
-                    <span className="decorationImage"style={decoration}> </span>
+                    <span className="decorationImage" style={decoration}> </span>
                 </div>
             </div>
             <form className="register" onSubmit={btnSignUp}>

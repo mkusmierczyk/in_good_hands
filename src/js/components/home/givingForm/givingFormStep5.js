@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Icon1 from "../../../../images/assets/Icon-1.svg"
-import Icon4 from "../../../../images/assets/Icon-1.svg"
+import Icon4 from "../../../../images/assets/Icon-4.svg"
 
 export const Step5 = ({dataStep1, dataStep2, dataStep3, dataStep4}) => {
 

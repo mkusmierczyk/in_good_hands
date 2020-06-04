@@ -7,7 +7,7 @@ import {Register} from "./components/registerLog/register";
 import {SignIn} from "./components/registerLog/signIn";
 import {LogOut} from "./components/registerLog/logOut";
 import {Giving} from "./components/home/givingForm/giving";
-import Decoration from "../images/assets/Decoration.svg"
+
 
 const App = () => {
     return (

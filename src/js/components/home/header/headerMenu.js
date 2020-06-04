@@ -4,7 +4,11 @@ import {HashLink} from 'react-router-hash-link';
 export const HeaderMenu = () => {
     const [menuOption, setMenuOption] = useState("");
     useEffect(() => {
-        if (window.location.href === "https://mkusmierczyk.github.io/in_good_hands/build/#/signIn" || window.location.href === "https://mkusmierczyk.github.io/in_good_hands/build/#/register") {
+        if (
+            window.location.href === "https://mkusmierczyk.github.io/in_good_hands/build/#/signIn"
+            || window.location.href === "https://mkusmierczyk.github.io/in_good_hands/build/#/register"
+            || window.location.href === "https://https://mkusmierczyk.github.io/in_good_hands/build/#/givingForm"
+            || window.location.href === "https://https://mkusmierczyk.github.io/in_good_hands/build/#/logOut") {
             setMenuOption("/build")
         } else setMenuOption("");
     }, []);
