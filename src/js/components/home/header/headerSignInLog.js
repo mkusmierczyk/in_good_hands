@@ -26,7 +26,6 @@ export const HeaderSignInLog = () => {
     useEffect(() => {
         firebase.auth().onAuthStateChanged(firebaseUser => {
             if (firebaseUser) {
-                console.log(firebaseUser, "czy to to");
                 setUserEmail(firebaseUser.email)
                 setHideLogout("")
             } else {
