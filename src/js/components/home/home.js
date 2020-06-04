@@ -13,7 +13,6 @@ export const Home = () => {
         backgroundImage:`url(${Decoration})`
     }
 
-
     return (
         <div className="container">
             <Header decoration={decoration} />

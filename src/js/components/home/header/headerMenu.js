@@ -4,8 +4,8 @@ import {HashLink} from 'react-router-hash-link';
 export const HeaderMenu = () => {
     const [menuOption, setMenuOption] = useState("");
     useEffect(() => {
-        if (window.location.href === "http://localhost:3001/signIn" || window.location.href === "http://localhost:3001/register") {
-            setMenuOption("/")
+        if (window.location.href === "https://mkusmierczyk.github.io/in_good_hands/build/#/signIn" || window.location.href === "https://mkusmierczyk.github.io/in_good_hands/build/#/register") {
+            setMenuOption("/build")
         } else setMenuOption("");
     }, []);
 
