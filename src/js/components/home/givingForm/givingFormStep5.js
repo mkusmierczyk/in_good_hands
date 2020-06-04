@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import Icon1 from "../../../../images/assets/Icon-1.svg"
+import Icon4 from "../../../../images/assets/Icon-1.svg"
 
 export const Step5 = ({dataStep1, dataStep2, dataStep3, dataStep4}) => {
 
@@ -42,8 +44,8 @@ export const Step5 = ({dataStep1, dataStep2, dataStep3, dataStep4}) => {
                 <h1 className="giving__form__info__step__title">Podsumowanie Twojej darowizny</h1>
                 <div className="giving__form__info__step5__localization ">
                     <p>Oddajesz</p>
-                    <p><img src="../../../../images/assets/Icon-1.svg" alt="icon1"/> {dataStep2} worki, {things} <span>{dataStep3[2]}</span><span>{dataStep3[3]}</span><span>{dataStep3[4]}</span><span>{dataStep3[5]}</span><span>{dataStep3[6]}</span></p>
-                    <p><img src="../../../../images/assets/Icon-4.svg" alt="icon4"/> dla lokalizacji {dataStep3[0]}</p>
+                    <p><img src={Icon1} alt="icon1"/> {dataStep2} worki, {things} <span>{dataStep3[2]}</span><span>{dataStep3[3]}</span><span>{dataStep3[4]}</span><span>{dataStep3[5]}</span><span>{dataStep3[6]}</span></p>
+                    <p><img src={Icon4} alt="icon4"/> dla lokalizacji {dataStep3[0]}</p>
                 </div>
                 <div className="giving__form__info__step5--twoColumns row">
                     <div className="giving__form__info__step5__address col-6">
