@@ -8,12 +8,12 @@
   height: 2rem;
   background-color: $background_color;
   color: $complementary_font_color;
-  margin-bottom: 1rem;
+  margin:0 0 0.8rem 1rem;
 }
 
 
 .giving__form__info__step3 {
- margin: 2rem 0 2rem 0;
+ margin: 1.5rem 0 1.5rem 0;
   display: flex;
   flex-grow: revert;
   flex-wrap: wrap;
@@ -27,7 +27,7 @@
   border: 1px solid $complementary_font_color;
   height: 2rem;
   width: 9rem;
-  margin: 1rem;
+  margin: 0.7rem 1rem 0.7rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
