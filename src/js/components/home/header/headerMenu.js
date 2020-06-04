@@ -9,13 +9,13 @@ export const HeaderMenu = () => {
             || window.location.href === "https://mkusmierczyk.github.io/in_good_hands/build/#/register"
             || window.location.href === "https://https://mkusmierczyk.github.io/in_good_hands/build/#/givingForm"
             || window.location.href === "https://https://mkusmierczyk.github.io/in_good_hands/build/#/logOut") {
-            setMenuOption("/build")
+            setMenuOption("/")
         } else setMenuOption("");
-    }, []);
+    }, [menuOption]);
 
     return (<>
         <ul className="col-12 header__content__menu">
-            <HashLink className="header__content__menu__link " to={`${menuOption}#signInLog`} smooth={true}
+            <HashLink className="header__content__menu__link " to={`/`} smooth={true}
                       duration={1000}>Start</HashLink>
             <HashLink className="header__content__menu__link " to={`${menuOption}#simpleSteps`} smooth={true}
                       duration={1000}>O co
