@@ -1,11 +1,9 @@
 import React, {Component} from "react";
-import ReactDOM from "react-dom";
-import {BrowserRouter, HashRouter, Link, Route} from "react-router-dom";
-
+import Signature from "../../../../images/assets/Signature.svg"
 export const AboutUs = () => {
     return (<>
-        <div className="row aboutUs" id = "aboutUs">
-            <div className="col-6 aboutUs__content ">
+        <div className="row aboutUs" id ="aboutUs">
+            <div className="col-6 aboutUs__content">
                 <div className="aboutUs__content_title title">
                     <h1> O nas </h1>
                     <span className="aboutUs__content__image decorationImage"> </span>
@@ -15,7 +13,7 @@ export const AboutUs = () => {
                         black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
                 </div>
                 <div className="row aboutUs__signature">
-                    <img src="../../../../images/assets/Signature.svg"/>
+                    <img src="../../../../images/assets/Signature.svg" alt="signature"/>
                 </div>
             </div>
             <div className="col-6  aboutUs__picture"> </div>

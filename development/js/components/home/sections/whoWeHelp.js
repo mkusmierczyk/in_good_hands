@@ -1,5 +1,5 @@
-import React, {Component, useEffect, useState} from "react";
-import {ReactDOM, NavLink} from "react-dom";
+import React, {Component, useState} from "react";
+
 import {Pagination} from "./whoWeHelpPagination";
 
 
@@ -14,19 +14,16 @@ export const WhoWeHelp = () => {
                 ngo: "",
                 local: "",
                 organizations: [
-
                     {
                         name: "Fundacja “Dbam ",
                         mission: "Cel i misja:  w trudnej sytuacji życiowej.",
                         things: " meble, zabawki",
                     },
-
                     {
                         name: "Fundacja “Dbam bardzo”",
                         mission: "Cel i misja: ubogich rodzin.",
                         things: "ubrania, jedzenie, sprzęt AGD, zabawki",
                     },
-
                     {
                         name: "Fundacja bardzo bardzo",
                         mission: "Cel i misja: posiadających miejsca zamieszkania.",
@@ -137,45 +134,25 @@ export const WhoWeHelp = () => {
         ]
     }
 
-
-    const [organizationSection, setOrganizationSection] = useState(alternateSection.whoWeHelp[0])
-    const [currentPage, setCurrentPage] = useState(1)
-    const [elemPerPage] = useState(3)
-
-
-
+    const [organizationSection, setOrganizationSection] = useState(alternateSection.whoWeHelp[0]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [elemPerPage] = useState(3);
     const HandleClick = (e) => {
         e.preventDefault()
         if (e.target.innerText === "Fundacjom") {
-
-
             setOrganizationSection(alternateSection.whoWeHelp[0])
-
         } else if (e.target.innerText === "Organizacjom Pozarządowym") {
-
             setOrganizationSection(alternateSection.whoWeHelp[1])
-
         } else
-
             setOrganizationSection(alternateSection.whoWeHelp[2])
     }
-
-
     const {title, fund, ngo, local} = organizationSection;
-
     const allBeneficiary = organizationSection.organizations;
-
-    //Get current page
-
     const indexOfLastElem = currentPage * elemPerPage;
     const indexOfFirstElem = indexOfLastElem - elemPerPage
     const currentElem = allBeneficiary.slice(indexOfFirstElem,indexOfLastElem)
 
-
-    //Change PAge
-    const paginate= pageNumber=> setCurrentPage(pageNumber)
-
-
+    const paginate= pageNumber => setCurrentPage(pageNumber)
 
     return (<>
             <div className="row whoWeHelp" id="fund">
@@ -200,12 +177,8 @@ export const WhoWeHelp = () => {
                     <div className="row whoWeHelp__content__beneficiary">
                         <h1 className="col-5 whoWeHelp__content__beneficiary__title">{title}</h1>
                     </div>
-
                    <Pagination elemPerPage={elemPerPage} totalElem={allBeneficiary.length} currentElem={currentElem} paginate={paginate}/>
-
-
                 </div>
-
             </div>
         </>
     )

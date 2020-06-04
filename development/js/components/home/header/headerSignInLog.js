@@ -1,12 +1,11 @@
 import React, {Component, useEffect, useState} from "react";
-import ReactDOM from "react-dom";
-import {BrowserRouter, HashRouter, Link, Route} from "react-router-dom";
+import { Link} from "react-router-dom";
 import firebase from "firebase/app";
 
 export const HeaderSignInLog = () => {
 
-    const [hideLogout, setHideLogout] = useState("")
-    const [userEmail, setUserEmail]=useState("")
+    const [hideLogout, setHideLogout] = useState("");
+    const [userEmail, setUserEmail]=useState("");
 
     const firebaseConfig = {
         apiKey: "AIzaSyD1yLySe8Y4y4K9noGnoDXUUFSz7VWGDZA",
@@ -24,7 +23,7 @@ export const HeaderSignInLog = () => {
         firebase.analytics()
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         firebase.auth().onAuthStateChanged(firebaseUser => {
             if (firebaseUser) {
                 console.log(firebaseUser, "czy to to");
@@ -35,13 +34,12 @@ export const HeaderSignInLog = () => {
                 setHideLogout("hide")
             }
         });
-    },[])
+    },[]);
 
     const btnLogout = () => {
         firebase.auth().signOut();
         window.location.replace("#/logOut")
     }
-
     let loginDiv;
     if (hideLogout === "") {
         loginDiv = <div className="col-12 header__content__signInLog" id="signInLog"><p>Witaj {userEmail}</p><Link to={"/givingForm"} className=" col-2 give"> Oddaj rzeczy</Link> <button className={`btn__logout btn col-1`} onClick={btnLogout}> Wyloguj</button></div>;
@@ -49,7 +47,6 @@ export const HeaderSignInLog = () => {
         loginDiv = <div className="col-12 header__content__signInLog" id="signInLog"><Link to={"/signIn"} className=" header__content__log">Zaloguj </Link>
         <Link to={"/register"} className=" header__content__signIn"> Załóż konto </Link></div>
     }
-
     return (<>
             {loginDiv}
     </>)

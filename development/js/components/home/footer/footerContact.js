@@ -1,4 +1,4 @@
-import React, {Component, useEffect, useState} from "react";
+import React, {Component, useState} from "react";
 import useInput from "../../hooks/useInput"
 
 
@@ -19,11 +19,9 @@ export const FooterContact = () => {
     //Validation
 
     const handleSubmit = (e) => {
-
         e.preventDefault()
         function checkEmail(emailAddress) {
             const reg = /^[-\w\.]+@([-\w]+\.)+[a-z]+$/i;
-
             return reg.test(emailAddress);
         }
 
@@ -59,12 +57,8 @@ export const FooterContact = () => {
                 body: JSON.stringify(formToSend)
             })
                 .then(resp => setSendForm(resp))
-
                 .catch(err => setErrorServer(err))}
-
     };
-
-
 
     return (<>
         <div className="col-4 footer__contact">
@@ -75,7 +69,6 @@ export const FooterContact = () => {
             {sendForm.status === 200 && <p className="formSent"> Wiadomość została wysłana! <span>Wkrótce się skontaktujemy </span></p>}
 
             <form className="footer__contact__form" onSubmit={handleSubmit}>
-
                 <div className="row  ">
                     <label className="col-6 footer__contact__data">
                         Wpisz swoje Imię:
@@ -92,13 +85,13 @@ export const FooterContact = () => {
                     <label>
                         Wpisz swoją wiadmość :
                         <textarea name="textArea" {...setMessage}
-                                  placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                                  placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
                         {errorMessage.length > 0 && <p className="error">{errorMessage}</p>}
                     </label>
                 </div>
-
                 <div className="footer__contact__submit">
-
                     <input className="footer__contact__submit__btn btn" type="submit" value="Wyślij" />
                 </div>
             </form>

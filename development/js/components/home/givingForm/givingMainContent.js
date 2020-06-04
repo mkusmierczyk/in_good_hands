@@ -1,12 +1,8 @@
 import React, {Component} from "react";
-import {HeaderSignInLog} from "../header/headerSignInLog";
-import {HeaderMenu} from "../header/headerMenu";
-
 
 export const GivingMainContent = () => {
-
     return (<>
-            <div className=" giving__title col-12  title">
+            <div className="giving__title col-12  title">
                 <h1> Oddaj rzeczy, których już nie chcesz <span>POTRZEBUJĄCYM!</span></h1>
                 <span className=" decorationImage"> </span>
                 <h1 className="giving__title__subtext">Wystarczą cztery proste kroki:</h1>

@@ -1,5 +1,5 @@
 {
-  "name": "Kulturka",
+  "name": "in_good_hands",
   "version": "1.0.0",
   "description": "<img alt=\"Logo\" src=\"https://coderslab.pl/svg/logo-coderslab.svg\" width=\"400\">",
   "main": "index.js",
@@ -10,13 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mkusmierczyk/Kulturka.git"
+    "url": "git+https://github.com/mkusmierczyk/in_good_hands.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mkusmierczyk/Kulturka.git/issues"
+    "url": "https://github.com/mkusmierczyk/in_good_hands/issues"
   },
   "browserslist": [
     "> 1%",
@@ -25,7 +25,7 @@
     "Firefox > 20",
     "since 2015"
   ],
-  "homepage": "https://github.com/mkusmierczyk/Kulturka.git#readme",
+  "homepage": "https://github.com/mkusmierczyk/in_good_hands#readme",
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/plugin-proposal-class-properties": "^7.4.0",

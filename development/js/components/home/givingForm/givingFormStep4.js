@@ -3,8 +3,6 @@ import useInput from "../../hooks/useInput";
 
 
 export const Step4 = ({step4Data}) => {
-
-
     const [street, setStreet]= useInput("");
     const [city, setCity]= useInput("");
     const [postalCode, setPostalCode]= useInput("");
@@ -12,19 +10,15 @@ export const Step4 = ({step4Data}) => {
     const [date, setDate]= useInput("");
     const [hour, setHour]= useInput("");
     const [comments, setComments]= useInput("");
-
     const receipt = [street, city, postalCode, phone, date, hour,comments];
 
-
-    useEffect(()=>{
+    useEffect(() => {
         step4Data(receipt)
-
     },[street,city,postalCode,phone,date,hour,comments]);
-
 
     return (
         <>
-            <div className=" col-10 giving__form__info__step ">
+            <div className="col-10 giving__form__info__step ">
                 <p className="giving__form__info__step__name">Krok 4/4 </p>
                 <h1 className="giving__form__info__step__title">Podaj adres oraz termin odbioru rzecz przez kuriera</h1>
                 <div className="giving__form__info__step4">
@@ -39,7 +33,6 @@ export const Step4 = ({step4Data}) => {
                         <label htmlFor="phone">Numer Telefonu:
                             <input type="text" id="phone" name="phone" {...setPhone}/></label>
                     </form>
-
                     <form  className="giving__form__info__step4__receiptDate col-3" >
                         <p className="giving__form__info__step4--title"> Termin Odbioru</p>
                         <label htmlFor="date" >Data:
@@ -48,12 +41,9 @@ export const Step4 = ({step4Data}) => {
                             <input type="text" id="hour" name="hour" {...setHour}/></label>
                         <label htmlFor="comments">Uwagi dla Kuriera:
                             <input type="textarea" id="comments" name="comments" {...setComments}/></label>
-
                     </form>
                 </div>
             </div>
-
         </>
-
     )
 };

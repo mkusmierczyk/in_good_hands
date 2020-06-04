@@ -1,11 +1,9 @@
 import React, {Component} from "react";
 
-
 export const Banner = ({showStep}) => {
-
     return (<>
             {showStep >= 5 ? <></> :
-                <div className=" givingBanner ">
+                <div className="givingBanner ">
                     <h1 className="row givingBanner__title title">Ważne! </h1>
                     {(showStep === 1) &&
                     <p className="row givingBanner__text"> Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu
@@ -22,7 +20,6 @@ export const Banner = ({showStep}) => {
                     <p className="row givingBanner__text">Podaj adres oraz termin odbioru rzeczy. </p>}
                 </div>
             }
-
         </>
     )
 }

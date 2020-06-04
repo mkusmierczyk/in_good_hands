@@ -13,14 +13,12 @@ import {Step4} from "./givingFormStep4";
 import {Step5} from "./givingFormStep5";
 import {Step6} from "./givingFormStep6";
 
-
 export const Giving = () => {
     const [showStep, setShowStep] = useState(1);
     const [dataStep1, setDataStep1] = useState("brak");
     const [dataStep2, setDataStep2] = useState("brak");
     const [dataStep3, setDataStep3] = useState("brak");
     const [dataStep4, setDataStep4] = useState("brak");
-
 
     const prevBtn = () => {
         showStep === 1 ? setShowStep(1) : setShowStep(showStep - 1)
@@ -29,23 +27,18 @@ export const Giving = () => {
     const nextBtn = () => {
         showStep === 6 ? setShowStep(6) : setShowStep(showStep + 1)
     };
-
-
     const step1Data = (checkboxes) => {
         return setDataStep1(checkboxes)
     };
-
     const step2Data = (bags) => {
         return setDataStep2(bags)
     };
     const step3Data = (receipt) => {
         return setDataStep3(receipt)
     };
-
     const step4Data = (receipt) => {
         return setDataStep4(receipt)
     };
-
 
     return (<>
             <div className="container">
@@ -83,6 +76,5 @@ export const Giving = () => {
                 <Footer/>
             </div>
         </>
-
     )
 };

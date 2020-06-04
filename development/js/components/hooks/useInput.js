@@ -2,7 +2,6 @@ import {useState} from "react";
 
 export default (valueOnStart) => {
     const [value, setValue] = useState(valueOnStart);
-
     return [
         value,
         {
@@ -11,6 +10,5 @@ export default (valueOnStart) => {
                 setValue(e.target.value);
             }
         }
-
     ]
 };

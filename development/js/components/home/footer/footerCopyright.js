@@ -1,13 +1,6 @@
 import React, {Component} from "react";
-import ReactDOM from "react-dom";
-import {BrowserRouter, HashRouter, Link, Route} from "react-router-dom";
-import {FooterContact} from "./footerContact";
-
 
 export const FooterCopyright = () => {
-
-
-
     return (<>
         <div className="row footer__copyright">
             <p className="col-6"> Copyright by Coders Lab</p>

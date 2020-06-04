@@ -1,20 +1,15 @@
 import React, {Component, useEffect, useState} from "react";
-import ReactDOM from "react-dom";
-import {Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller} from 'react-scroll'
 import {HashLink} from 'react-router-hash-link';
 
 export const HeaderMenu = () => {
-    const [menuOption, setMenuOption] = useState("")
-
+    const [menuOption, setMenuOption] = useState("");
     useEffect(() => {
         if (window.location.href === "http://localhost:3001/signIn" || window.location.href === "http://localhost:3001/register") {
             setMenuOption("/")
         } else setMenuOption("");
-
-    }, [])
+    }, []);
 
     return (<>
-
         <ul className="col-12 header__content__menu">
             <HashLink className="header__content__menu__link " to={`${menuOption}#signInLog`} smooth={true}
                       duration={1000}>Start</HashLink>
