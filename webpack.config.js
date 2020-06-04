@@ -4,14 +4,14 @@ const Html = require('html-webpack-plugin');
 const MiniCSS = require("mini-css-extract-plugin");
 
 
-const entryPath = "development";
+const entryPath = "src";
 const entryFile = "app.js";
 
 module.exports = {
   entry: `./${entryPath}/js/${entryFile}`,
   output: {
     filename: "out.js",
-    path: path.resolve(__dirname, `${entryPath}/build`)
+    path: path.resolve(__dirname, `./build`)
   },
   mode: "development",
   devtool: "source-map",
@@ -61,8 +61,8 @@ module.exports = {
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
-          publicPath: `${entryPath}/images/`,
-          outputPath: `${entryPath}/images/`
+          publicPath: `./images/assets`,
+          outputPath: `./images/assets`
         }
       }
     ]

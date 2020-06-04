@@ -1,0 +1,56 @@
+body {
+  font-size: 14px;
+  box-sizing:border-box;
+  font-family: 'Open Sans', sans-serif;
+  color:$main_font_color;
+}
+
+.btn{
+  background-color: $white;
+  border-radius:  1px solid $complementary_font_color;
+  a {
+    height: 8rem;
+    text-decoration: none;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.decorationImage{
+
+    display: block;
+    background-size: cover;
+    background:  no-repeat center;
+    height: 7rem;
+}
+
+.title{
+  text-align: center;
+  font-size: 2rem
+}
+
+.active{
+  border:1px solid $complementary_font_color;
+}
+
+.error{
+  font-size: 0.7rem;
+  color:red;
+  font-weight: bold;
+}
+
+.formSent{
+  color: darkgreen;
+font-weight: bold;
+  font-size:1rem;
+  text-align: center;
+  margin-bottom:1.3rem;
+  span{
+    display: block;
+    margin-top: 0.5rem;
+  }
+}
+
+.hide{
+  display: none;
+}
