@@ -75,7 +75,7 @@ export const Giving = () => {
                                 dataStep2={dataStep2}
                                 dataStep3={dataStep3}
                                 dataStep4={dataStep4}/>}
-                            {(showStep === 6) && <Step6/>}
+                            {(showStep === 6) && <Step6 decoration={decoration}/>}
                         </div>
                         <div className="row">
                             <div className="col-2"></div>

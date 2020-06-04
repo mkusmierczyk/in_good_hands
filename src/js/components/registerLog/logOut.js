@@ -10,6 +10,7 @@ export const LogOut = () => {
     }
     return (
         <>
+            <div className="container">
             <HeaderSignInLog/>
             <HeaderMenu/>
             <div className="row">
@@ -20,6 +21,7 @@ export const LogOut = () => {
             </div>
             <div className="logOut__btn__menu">
             <Link to={'/'} > Strona Główna </Link>
+            </div>
             </div>
         </>
     )
