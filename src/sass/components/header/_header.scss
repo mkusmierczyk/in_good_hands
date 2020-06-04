@@ -1,10 +1,23 @@
-.header{
+.header {
   height: 64em;
+  @media (max-width: 745px) {
+    height: 58em;
+  }
 }
 
-.header__picture{
-  background:no-repeat ;
+.header__picture {
+  background: no-repeat;
   background-position: 10% 10%;
   background-size: 100% 100%;
+  @media (max-width: 745px) {
+    display: none;
+
+  }
 }
 
+.header__content {
+  @media (max-width: 745px) {
+    flex-grow: 12;
+
+  }
+}

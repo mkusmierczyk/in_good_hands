@@ -5,7 +5,6 @@ import {StartHelp} from "./headerStartHelp";
 import HomeHeroImage from "../../../../images/assets/Home-Hero-Image.jpg"
 
 export const Header = ({decoration}) => {
-
     const style = {
         backgroundImage: `url(${HomeHeroImage})`
     }

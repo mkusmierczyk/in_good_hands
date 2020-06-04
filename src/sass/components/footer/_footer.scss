@@ -7,4 +7,7 @@
   background:no-repeat 10% 10%;
   background-size: 170% 120%;
   opacity: 0.3;
+  @media (max-width: 745px) {
+   display: none;
+  }
 }

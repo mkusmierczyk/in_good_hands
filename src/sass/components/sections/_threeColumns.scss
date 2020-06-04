@@ -1,24 +1,27 @@
 .threeColumns{
   text-align: center;
   background-color: #dddd1d;
-  height: 20rem;
-
-
+  height: 22rem;
+  @media (max-width: 745px) {
+    display: flex;
+    flex-direction: column;
+    height: 65rem;
+  align-items: center;
+  }
 }
-
 .threeColumns__content {
-  margin: 4rem 5rem 4rem 5rem
+  margin: 4rem 5rem 4rem 5rem;
+  @media (max-width: 745px) {
+   margin: 4rem 0 4rem 0;
+  }
 }
 .threeColumns__content_counter{
   font-size: 5rem;
-
 }
-
 .threeColumns__content_title{
   font-size: 1rem;
   margin: 1rem 0 1rem 0;
 }
-
 .threeColumns__content_text{
   font-size: 0.9rem;
   font-weight: lighter;

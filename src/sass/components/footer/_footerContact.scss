@@ -1,3 +1,12 @@
+.footer__contact{
+  @media (max-width: 745px) {
+  display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    margin:0 5px 0 5px
+  }
+}
+
 .footer__contact__title {
   margin-top: 4rem;
 }
@@ -26,6 +35,9 @@
     width: 85%;
     height: 7rem;
     resize: none;
+    @media (max-width: 745px) {
+      width:100%
+    }
   }
 }
 

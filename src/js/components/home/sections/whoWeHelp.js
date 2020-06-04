@@ -163,19 +163,19 @@ export const WhoWeHelp = ({decoration}) => {
                     </div>
                     <div className="row whoWeHelp__content_organisations">
                         <div
-                            className={`col-2 whoWeHelp__content_organisations__fundations  ${fund}`}
+                            className={`col-4 whoWeHelp__content_organisations__fundations  ${fund}`}
                             onClick={HandleClick}>Fundacjom
                         </div>
-                        <div className={`col-2 whoWeHelp__content_organisations_ngo ${ngo}`}
+                        <div className={`col-5 whoWeHelp__content_organisations_ngo ${ngo}`}
                              onClick={HandleClick}>Organizacjom Pozarządowym
                         </div>
-                        <div className={`col-2 whoWeHelp__content_organisations__local ${local}`}
+                        <div className={`col-4 whoWeHelp__content_organisations__local ${local}`}
                              onClick={HandleClick}>Lokalnym
                             zbiórkom
                         </div>
                     </div>
                     <div className="row whoWeHelp__content__beneficiary">
-                        <h1 className="col-5 whoWeHelp__content__beneficiary__title">{title}</h1>
+                        <h1 className="col-7 whoWeHelp__content__beneficiary__title">{title}</h1>
                     </div>
                    <Pagination elemPerPage={elemPerPage} totalElem={allBeneficiary.length} currentElem={currentElem} paginate={paginate}/>
                 </div>

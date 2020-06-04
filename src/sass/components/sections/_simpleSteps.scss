@@ -5,8 +5,6 @@
   margin: 2rem 0 2rem 0;
   font-size: 2rem;
 
-
-
 }
 .simpleSteps__content{
   display: flex;
@@ -41,12 +39,16 @@
   display: flex;
   justify-content: center;
 
+  }
+
   button{
     margin:2rem 2.5rem 0 3rem;
     font-family: $text_font;
     height:8rem;
     width: 17% ;
     border: 1px solid $main_font_color;
+    @media (max-width: 745px) {
+      width: 85%;
 
   }
   a {
@@ -58,4 +60,11 @@
 }
 .icon2 .simpleSteps__content_text {
   margin-left: 3rem;
+}
+.simpleSteps--all{
+  @media (max-width: 745px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
 }

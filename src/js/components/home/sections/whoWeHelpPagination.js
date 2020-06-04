@@ -8,7 +8,7 @@ export const Pagination = ({elemPerPage, totalElem, currentElem, paginate}) => {
     return (<>
             <ul className="whoWeHelp__content__beneficiary__list">
                 {currentElem.map((elem, index) => <li
-                    className="col-9 whoWeHelp__content__beneficiary__list__elem" key={index}>
+                    className="col-11 whoWeHelp__content__beneficiary__list__elem" key={index}>
                     <h2 className="col-6 whoWeHelp__content__beneficiary__elem__name">{elem.name}<span
                         className="col-6 whoWeHelp__content__beneficiary__elem__things">{elem.things}</span>
                     </h2>

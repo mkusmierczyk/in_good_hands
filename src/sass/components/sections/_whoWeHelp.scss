@@ -7,36 +7,42 @@
   justify-content: center;
   font-size: 1.3rem;
   cursor: pointer;
-
+  @media (max-width: 745px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   div {
     margin: 1rem;
     height: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
 
+  }
 }
 .whoWeHelp__content_organisations_ngo {
   text-align: center;
+
+
 }
 
 .whoWeHelp__content__beneficiary {
-   display: flex;
+  display: flex;
   justify-content: center;
-  font-size:1.3rem;
+  font-size: 1.3rem;
   margin-top: 2rem;
 }
-.whoWeHelp__content__beneficiary__title{
+
+.whoWeHelp__content__beneficiary__title {
   text-align: center;
 }
 
 
-
-.whoWeHelp__content__beneficiary__list{
+.whoWeHelp__content__beneficiary__list {
   display: flex;
   flex-direction: column;
-align-items: center;
+  align-items: center;
   color: $black;
   font-family: $complementary_font;
   font-weight: 300;
@@ -44,7 +50,7 @@ align-items: center;
 }
 
 
-.whoWeHelp__content__beneficiary__list__elem{
+.whoWeHelp__content__beneficiary__list__elem {
   border-bottom: 1px solid $complementary_font_color;
   display: flex;
   flex-direction: row;
@@ -52,30 +58,40 @@ align-items: center;
   font-weight: 300;
 
 }
-.whoWeHelp__content__beneficiary__elem__name{
+
+.whoWeHelp__content__beneficiary__elem__name {
   font-size: 1rem;
-  margin:1.2rem 0 1.2rem 0
+  margin: 1.2rem 0 1.2rem 0
 
 }
-.whoWeHelp__content__beneficiary__elem__things{
+
+.whoWeHelp__content__beneficiary__elem__things {
   display: block;
   margin-top: 0.5rem;
   font-style: italic;
 }
 
-.whoWeHelp__content__beneficiary__elem__mission{
-  margin:1.2rem 0 1.2rem 0;
-  text-align:right
+.whoWeHelp__content__beneficiary__elem__mission {
+  margin: 1.2rem 0 1.2rem 0;
+  text-align: right
 }
-.whoWeHelp__content__beneficiary{
+
+.whoWeHelp__content__beneficiary {
   display: flex;
   align-content: center;
   justify-content: center;
-  li a{
+
+  li a {
     border: 1px solid $complementary_font_color;
     text-decoration: none;
     padding: 0 1rem 0 1rem;
-    margin:0.3rem;
-    color:$complementary_font_color;
+    margin: 0.3rem;
+    color: $complementary_font_color;
   }
+}
+.whoWeHelp__content_organisations__local{
+  @media (max-width: 745px) {
+    text-align: center;
+  }
+
 }

@@ -10,11 +10,7 @@ $column-base-width: 100% / $columns;
 
     .row {
       display: flex;
-  @media  (max-width: 800px){
 
-    flex-wrap: wrap;
-
-  }
 
     [class*='col-'] {
       min-height: 1px;
