@@ -1,5 +1,8 @@
 .header__content__startHelp{
   margin-top: 11em;
+    @media (max-width: 745px) {
+      margin-top: 4rem ;
+    }
 }
 .header__content__startHelp__title{
 
@@ -15,6 +18,7 @@
     padding-left: 0.9rem;
    justify-content:space-between;
     padding-right: 0.5rem;
+    margin-bottom: 2rem;
      @media  (max-width: 745px){
      padding:0;
      width:100%

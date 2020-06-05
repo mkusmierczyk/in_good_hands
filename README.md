@@ -26,6 +26,8 @@ So Homemade Lumber site goes against expectations and resolves this problem
 * HTML - version 5.0
 * CSS - version 4.0
 * Sass -  with Gulp Tool
+* RWD
+
 ## Setup
 
 How to start:

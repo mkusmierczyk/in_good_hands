@@ -1,7 +1,7 @@
 .giving {
   height: 59em;
   @media (max-width: 745px) {
-    height: 115rem
+    height: 38rem
   }
 }
 .giving__content {
@@ -27,7 +27,6 @@
   @media (max-width: 745px) {
     margin-top: 1rem;
   }
-
   span {
     display: block;
     margin-top: 1rem;
@@ -40,11 +39,7 @@
   @media (max-width: 1400px) {
     display: none;
   }
-  @media (max-width: 745px) {
-    display: block;
-    font-size: 1.5rem;
-    text-align: center;
-  }
+
 }
 .giving__text {
   display: flex;
@@ -56,13 +51,7 @@
   @media (max-width: 1400px) {
     display: none;
   }
-  @media (max-width: 745px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    margin-top: 2rem;
-  }
+
   span {
     display: block;
     text-align: center;
@@ -106,7 +95,8 @@
   @media (max-width: 745px) {
     height: 100vh;
     margin: 5px;
-
+    background-size:cover ;
+    background-position: 70% 50%;
   }
 }
 .giving__form__info {
@@ -117,5 +107,4 @@
   @media (max-width: 745px) {
     flex-grow: 2;
   }
-
 }

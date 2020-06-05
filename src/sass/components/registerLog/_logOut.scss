@@ -18,6 +18,10 @@
     font-size: 1rem;
     text-decoration: none;
     height: 3rem;
-    border: 1px solid $complementary_font_color
+    border: 1px solid $complementary_font_color;
+    @media (max-width: 745px) {
+      width: 20%;
+      text-align:center
+    }
   }
 }

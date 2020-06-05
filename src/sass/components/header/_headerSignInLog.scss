@@ -13,6 +13,9 @@
     color: $complementary_font_color;
     border: solid 1px white;
     font-family: $text_font;
+    @media (max-width: 745px) {
+     margin: 0 25px 0 0;
+    }
   }
 
   p {
@@ -20,6 +23,7 @@
     align-self: center;
     font-size: 1rem;
     font-weight: bold;
+
   }
 }
 
