@@ -1,22 +1,13 @@
-.header {
-  @media (max-width: 745px) {
-
-  }
-}
-
 .header__picture {
   background: no-repeat;
   background-position: 10% 10%;
   background-size: 100% 100%;
   @media (max-width: 745px) {
     display: none;
-
   }
 }
-
 .header__content {
   @media (max-width: 745px) {
     flex-grow: 12;
-
   }
 }

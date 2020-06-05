@@ -11,16 +11,16 @@
     justify-content: center;
     align-content: center;
     background-color: black;
-
   }
 }
-.hideMenu{
+
+.hideMenu {
   @media (max-width: 745px) {
     display: none;
   }
 }
 
-.hideHam{
+.hideHam {
   @media (min-width: 745px) {
     display: none;
   }
@@ -34,7 +34,7 @@
     width: 100%;
     margin: 1rem 1px;
     height: 2rem;
-    color:white;
+    color: white;
     border-color: $background_color;
     border-bottom: white solid 1px;
     text-align: center;
@@ -44,17 +44,19 @@
 .current {
   background-color: red;
 }
-.hamburger{
+
+.hamburger {
   position: absolute;
   top: 1px;
   left: 1px;
   cursor: pointer;
   display: none;
   @media (max-width: 745px) {
-   display: block;
+    display: block;
   }
 }
-.hide{
+
+.hide {
   display: none;
 }
 

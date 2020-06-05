@@ -66,24 +66,24 @@ export const Register = () => {
             </div>
             <form className="register" onSubmit={btnSignUp}>
                 <div className="row registerForm ">
-                    <label className="col-3 registerForm__data">
+                    <label className="col-4 registerForm__data">
                         Email:
                         <input type="email" name="email" placeholder="abc@xyz.pl" {...setEmail}/>
                         {errorEmail.length > 0 && <p className="error">{errorEmail}</p>}
                     </label>
-                    <label className="col-3 registerForm__data">
+                    <label className="col-4 registerForm__data">
                         Hasło :
                         <input type="password" name="password" {...setPassword}/>
                         {errorPassword.length > 0 && <p className="error">{errorPassword}</p>}
                     </label>
-                    <label className="col-3 registerForm__data" {...setRepeatPassword}>
+                    <label className="col-4 registerForm__data" {...setRepeatPassword}>
                         Powtórz Hasło :
                         <input type="password" name="repeatPassword"/>
                         {password !== repeatPassword && <p className="error">Hasła są różne</p>}
                     </label>
                 </div>
                 <div className="row registerForm__btns  ">
-                    <input className="col-1 registerForm__btn__register btn" type="submit" value="Załóż konto"/>
+                    <input className="col-2 registerForm__btn__register btn" type="submit" value="Załóż konto"/>
                     <Link to={"/signIn"} className="registerForm__btn__log btn">Zaloguj się </Link>
                 </div>
             </form>

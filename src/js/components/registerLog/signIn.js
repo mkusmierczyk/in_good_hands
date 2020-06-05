@@ -63,8 +63,8 @@ export const SignIn = () => {
                     </label>
                 </div>
                 <div className="row registerForm__btns">
-                    <Link to={"/register"} className={`col-1 registerForm__btn__register btn`}> Załóż konto </Link>
-                    <input className=" col-1 registerForm__btn__log btn " type="submit" value="Zaloguj się"
+                    <Link to={"/register"} className={`col-3 registerForm__btn__register btn`}> Załóż konto </Link>
+                    <input className=" col-3 registerForm__btn__log btn " type="submit" value="Zaloguj się"
                     />
                 </div>
             </form>
