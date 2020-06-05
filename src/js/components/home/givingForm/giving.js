@@ -65,7 +65,7 @@ export const Giving = () => {
                 <div className="row giving__form" style={backgroundStyle}>
                     <div className="col-7 giving__form__info">
                         <div className="row">
-                            <div className="col-2 "></div>
+                            <div className="col-2 change"></div>
                             {(showStep === 1) && <Step1 step1Data={step1Data}/>}
                             {(showStep === 2) && <Step2 step2Data={step2Data}/>}
                             {(showStep === 3) && <Step3 step3Data={step3Data}/>}

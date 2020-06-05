@@ -1,25 +1,51 @@
 .giving {
-  height: 55em;
+  height: 59em;
+  @media (max-width: 745px) {
+    height: 115rem
+  }
 }
-
+.giving__content {
+  @media (max-width: 1400px) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 12;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .giving__pic {
-  background:no-repeat 10% 20%;
+  background: no-repeat 10% 20%;
   background-size: 130% 120%;
+  @media (max-width: 745px) {
+    display: none;
+  }
 }
-
 .giving__title {
+  @media (max-width: 1400px) {
+    margin-top: 10rem;
+  }
+  @media (max-width: 745px) {
+    margin-top: 1rem;
+  }
+
   span {
     display: block;
     margin-top: 1rem;
   }
 }
-
-.giving__title__subtext{
+.giving__title__subtext {
   font-weight: lighter;
   margin-bottom: 2rem;
   font-size: 2rem;
+  @media (max-width: 1400px) {
+    display: none;
+  }
+  @media (max-width: 745px) {
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }
-
 .giving__text {
   display: flex;
   align-content: center;
@@ -27,28 +53,49 @@
   justify-items: center;
   font-size: 1.7rem;
   color: $complementary_font_color;
-
+  @media (max-width: 1400px) {
+    display: none;
+  }
+  @media (max-width: 745px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-top: 2rem;
+  }
   span {
     display: block;
     text-align: center;
-    margin:2rem 0 1rem 0;
+    margin: 2rem 0 1rem 0;
     font-size: 2rem;
-
+    @media (max-width: 745px) {
+      margin: 0;
+      text-align: center;
+    }
   }
-  p{
+  p {
     text-align: center;
     margin: 1rem;
-    &:after{
+    @media (max-width: 745px) {
+      margin: 0;
+      text-align: center;
+      height: 250px;
+    }
+    &:after {
       content: "";
       display: block;
       width: 9rem;
       height: 9rem;
       border: 1px solid $complementary_font_color;
-      transform:rotate(45deg);
-      position:relative;
-      bottom:7rem;
+      transform: rotate(45deg);
+      position: relative;
+      bottom: 7rem;
       right: 0.5rem;
-
+      @media (max-width: 745px) {
+        left: -3.5rem;
+        width: 12rem;
+        height: 12rem;
+      }
     }
   }
 }
@@ -56,10 +103,19 @@
   background: no-repeat ;
   background-size: 100% 100%;
   height: 60vh;
+  @media (max-width: 745px) {
+    height: 100vh;
+    margin: 5px;
+
+  }
 }
-.giving__form__info{
+.giving__form__info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 50vh;
+  @media (max-width: 745px) {
+    flex-grow: 2;
+  }
+
 }

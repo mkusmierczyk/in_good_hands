@@ -1,20 +1,24 @@
-.givingBanner{
+.givingBanner {
   display: flex;
-justify-content: center;
+  justify-content: center;
   flex-direction: column;
   background-color: #FAD648;
   height: 10rem;
-  padding:0 10rem 0 10rem;
+  padding: 0 10rem 0 10rem;
+  @media (max-width: 745px) {
+   padding: 0 2rem;
+  }
 }
 
-.givingBanner__title{
+.givingBanner__title {
   font-weight: bold;
   margin-bottom: 1rem;
 
 }
-.givingBanner__text{
 
-  a{
+.givingBanner__text {
+
+  a {
     text-decoration: none;
     color: $main_font_color;
   }

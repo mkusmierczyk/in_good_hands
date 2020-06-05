@@ -18,19 +18,21 @@
   flex-grow: revert;
   flex-wrap: wrap;
 
-
 }
 
 .giving__form__info__step3__checkbox {
   font-size: 1.3rem;
   color: $complementary_font_color;
   border: 1px solid $complementary_font_color;
-  height: 2rem;
-  width: 9rem;
+  height: 3rem;
   margin: 0.7rem 1rem 0.7rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-items: center;
+  @media (max-width: 745px) {
+    font-size: 0.7rem;
+  }
   input {
     display: none;
   }
@@ -44,5 +46,16 @@
   margin-top:0.5rem;
   display: block;
   width: 60%;
+  @media (max-width: 745px) {
+    margin-bottom: 1rem;
+  }
+}
 
+.change{
+  @media (max-width: 745px) {
+ display: none;
+  }
+}
+.mothers{
+  text-align: center;
 }

@@ -37,19 +37,19 @@ export const Step3 = ({step3Data}) => {
                 </div>
                 <h1 className="giving__form__info__step--subtitle">Komu Chcesz pomóc</h1>
                 <div className="giving__form__info__step3">
-                <label className={`giving__form__info__step3__checkbox col-3 ${kids}`}  >dzieciom
+                <label className={`giving__form__info__step3__checkbox col-4 ${kids}`}  >dzieciom
                     <input type="checkbox" onClick={handleClickKids}/>
                 </label>
-                <label className={`giving__form__info__step3__checkbox col-3 ${mothers}`}  >samotnym matkom
+                <label className={`giving__form__info__step3__checkbox col-4  mothers ${mothers}`}  >samotnym matkom
                     <input type="checkbox"onClick={handleMothers}/>
                 </label>
-                <label className={`giving__form__info__step3__checkbox col-3 ${homeless}`} >bezdomnym
+                <label className={`giving__form__info__step3__checkbox col-4 ${homeless}`} >bezdomnym
                     <input type="checkbox" onClick={handleHomeless}/>
                 </label>
-                <label className={`giving__form__info__step3__checkbox col-3 ${handicap}`} >niepełnosprawnym
+                <label className={`giving__form__info__step3__checkbox col-4 ${handicap}`} >niepełnosprawnym
                     <input type="checkbox"  onClick={handleHandicap}/>
                 </label>
-                <label className={`giving__form__info__step3__checkbox col-3 ${elderly}`}  >Osobom starszym
+                <label className={`giving__form__info__step3__checkbox col-4 ${elderly}`}  >Osobom starszym
                     <input type="checkbox"onClick={handleElderly}/>
                 </label>
                 </div>
